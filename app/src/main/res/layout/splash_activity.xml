@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:htext="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.hanks.htextview.HTextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        htext:animateType="scale"
+        android:background="#000"
+        android:text="som"
+        android:textColor="#fff"
+        android:textSize="50sp"/>
+
+</LinearLayout>
