@@ -47,13 +47,6 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
             }
         }, 3000);
 
-     /*   handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                hTextView.animateText(sentences[2]);
-
-            }
-        }, 1500);*/
 
     }
 
