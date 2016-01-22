@@ -15,7 +15,6 @@
         android:onClick="onClick"
         htext:animateType="scale"
         android:background="#000"
-        android:text="som"
         android:textColor="#fff"
         android:textSize="50sp"/>
 
