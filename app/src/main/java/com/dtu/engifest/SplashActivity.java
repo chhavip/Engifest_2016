@@ -1,5 +1,6 @@
 package com.dtu.engifest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -46,6 +47,17 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
 
             }
         }, 3000);
+
+        final Handler handler2 = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(SplashActivity.this, MenuActivity.class));
+
+            }
+        }, 5000);
+
+
 
 
     }
