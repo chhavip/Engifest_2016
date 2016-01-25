@@ -23,21 +23,24 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.menu_main_activity);
         coolMenuFrameLayout = (CoolMenuFrameLayout)findViewById(R.id.rl_main);
+
         String[] titles = {"CONTACT", "ABOUT", "TEAM", "PROJECTS"};
         titleList = Arrays.asList(titles);
         coolMenuFrameLayout.setTitles(titleList);
 
         fragments.add(new Fragment1());
-        fragments.add(new Fragment1());
-        fragments.add(new Fragment1());
-        fragments.add(new Fragment1());
+        fragments.add(new Fragment2());
+        fragments.add(new Fragment3());
+        fragments.add(new Fragment4());
 
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
                 return fragments.get(position);
+
             }
 
             @Override
