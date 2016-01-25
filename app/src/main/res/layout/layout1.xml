@@ -11,6 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="click"/>
+        android:text="click ME"/>
+
+    <com.github.jorgecastillo.FillableLoader
+        android:id="@+id/fillableLoader"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:fl_originalWidth="650"
+        app:fl_originalHeight="650"
+        app:fl_strokeColor="#000000"
+        app:fl_fillColor="#FF0000"
+        app:fl_strokeWidth="2dp"
+        app:fl_strokeDrawingDuration="3000"
+        app:fl_fillDuration="5000"
+        app:fl_clippingTransform="rounded"
+        android:layout_gravity="right|bottom" />
 
 </FrameLayout>

@@ -30,4 +30,5 @@ dependencies {
     compile 'com.github.DxTT:coolMenu:v1.1'
     compile 'com.cesarferreira.colorize:library:0.2.1'
     compile 'com.github.satyan:sugar:1.4'
+    compile 'com.github.jorgecastilloprz:fillableloaders:1.02@aar'
 }

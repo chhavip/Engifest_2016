@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.jorgecastillo.FillableLoader;
+
 /**
  * Created by chhavi on 24/1/16.
  */
@@ -21,6 +23,10 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout1, container, false);
+        FillableLoader fillableLoader = (FillableLoader)view.findViewById(R.id.fillableLoader);
+
+        fillableLoader.setSvgPath(getString(R.string.seventy_five_engi));
+        fillableLoader.start();
         return view;
     }
 
