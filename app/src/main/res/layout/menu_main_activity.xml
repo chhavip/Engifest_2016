@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#CDDBEE"
+    android:background="#000000"
     tools:context="com.foocoder.coolmenu.MainActivity">
 
     <include layout="@layout/content_main" />

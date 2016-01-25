@@ -27,7 +27,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.menu_main_activity);
         coolMenuFrameLayout = (CoolMenuFrameLayout)findViewById(R.id.rl_main);
 
-        String[] titles = {"CONTACT", "ABOUT", "TEAM", "PROJECTS"};
+            String[] titles = {"ABOUT US", "SPONSORS", "SCHEDULE", "EVENTS", "HOME"};
         titleList = Arrays.asList(titles);
         coolMenuFrameLayout.setTitles(titleList);
 
@@ -35,6 +35,7 @@ public class MenuActivity extends AppCompatActivity {
         fragments.add(new Fragment2());
         fragments.add(new Fragment3());
         fragments.add(new Fragment4());
+        fragments.add(new Fragment5());
 
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override

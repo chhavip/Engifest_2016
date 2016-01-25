@@ -25,6 +25,7 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         final String[] sentences = new String[]{"THE WAIT", "IS OVER", "OVER"};
         setContentView(R.layout.splash_activity);
         hTextView = (HTextView) findViewById(R.id.text2);
