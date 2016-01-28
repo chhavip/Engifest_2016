@@ -20,17 +20,17 @@ import java.util.List;
  */
 public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdapter.MyViewHolder> {
 
-    public List<Category> list;
+    public List<Sponsors> list;
     public int resId;
     Context context;
     boolean isSponsors;
-    public TextWithImageAdapter(List<Category> list, int resId, Context context) {
-            this.list = list;
-            this.resId = resId;
+    public TextWithImageAdapter(List<Sponsors> list, int resId, Context context) {
+        this.list = list;
+        this.resId = resId;
         if(resId == R.layout.card_with_text_and_image)  {
             isSponsors = true;
         }
-            this.context = context;
+        this.context = context;
     }
 
     @Override

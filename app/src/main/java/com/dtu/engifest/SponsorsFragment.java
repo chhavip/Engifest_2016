@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dtu.engifest.models.Category;
 import com.dtu.engifest.models.Sponsors;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -39,7 +40,6 @@ public class SponsorsFragment extends Fragment {
         View view = inflater.inflate(R.layout.sponsors_fragment_layout, container, false);
         sponsorsList = new ArrayList<>();
         addSponsors();
-
         sponsorsRecycler = (RecyclerView) view.findViewById(R.id.cardList);
         myAdapter = new TextWithImageAdapter(sponsorsList, R.layout.card_with_text_and_image, getActivity());
         sponsorsRecycler.setAdapter(myAdapter);

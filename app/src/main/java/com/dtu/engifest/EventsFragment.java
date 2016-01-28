@@ -23,7 +23,7 @@ import java.util.List;
 public class EventsFragment extends Fragment {
 
     RecyclerView eventCategoryRecycler;
-    ArrayList<Category> eventCategoryList;
+    ArrayList<Sponsors> eventCategoryList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,9 +46,9 @@ public class EventsFragment extends Fragment {
 
     private void addEventCategories() {
 
-        List<Category> categories = Category.listAll(Category.class);
-        for(Category category:categories){
-            Category eventCategory = new Category();
+        List<Sponsors> categories = Sponsors.listAll(Sponsors.class);
+        for(Sponsors category:categories){
+            Sponsors eventCategory = new Sponsors();
             eventCategory.setName(category.getName());
             eventCategory.setImageResource(category.getImageResource());
             eventCategoryList.add(eventCategory);

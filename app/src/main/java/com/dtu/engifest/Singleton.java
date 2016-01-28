@@ -3,6 +3,7 @@ package com.dtu.engifest;
 import com.dtu.engifest.models.Category;
 import com.dtu.engifest.models.Contact;
 import com.dtu.engifest.models.Events;
+import com.dtu.engifest.models.Sponsors;
 import com.orm.SugarRecord;
 
 import java.util.ArrayList;
@@ -29,14 +30,14 @@ public class Singleton {
         return singleton;
     }
     public void initialiseDb(){
-        List<Category> caregories = new ArrayList<>();
-        caregories.add(new Category( "Dance", R.drawable.dance));
-        caregories.add(new Category("Music", R.drawable.music));
-        caregories.add(new Category ("Drama", R.drawable.drama));
-        caregories.add(new Category("Fashion", R.drawable.fashion));
-        caregories.add(new Category("Pro Nights", R.drawable.pro_nights));
-        caregories.add(new Category("Miscellaneous", R.drawable.misc));
-        caregories.add(new Category("Informal Events", R.drawable.inf));
+        List<Sponsors> caregories = new ArrayList<>();
+        caregories.add(new Sponsors( "Dance", R.drawable.dance));
+        caregories.add(new Sponsors("Music", R.drawable.music));
+        caregories.add(new Sponsors ("Drama", R.drawable.drama));
+        caregories.add(new Sponsors("Fashion", R.drawable.fashion));
+        caregories.add(new Sponsors("Pro Nights", R.drawable.pro_nights));
+        caregories.add(new Sponsors("Miscellaneous", R.drawable.misc));
+        caregories.add(new Sponsors("Informal Events", R.drawable.inf));
 
         SugarRecord.saveInTx(caregories);
 
