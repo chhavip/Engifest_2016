@@ -13,7 +13,7 @@ import com.github.jorgecastillo.FillableLoader;
 /**
  * Created by chhavi on 24/1/16.
  */
-public class Fragment5 extends Fragment {
+public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

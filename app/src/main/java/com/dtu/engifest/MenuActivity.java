@@ -35,7 +35,7 @@ public class MenuActivity extends AppCompatActivity {
         fragments.add(new Fragment2());
         fragments.add(new Fragment3());
         fragments.add(new Fragment4());
-        fragments.add(new Fragment5());
+        fragments.add(new HomeFragment());
 
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
