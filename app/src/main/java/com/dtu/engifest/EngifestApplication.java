@@ -170,5 +170,24 @@ public class EngifestApplication extends SugarApp {
         SugarRecord.saveInTx(fashionEvents);
 
 
+        List<Events> proNightEvents = new ArrayList<>();
+
+        proNightEvents.add(new Events("Pro Nights", "Rock Night", "Sports Complex", "\n" +
+                "“Rock and roll is a nuclear blast of reality in a mundane world where no-one is allowed to be magnificent.” -Kim Fowley\n" +
+                "Engifest’16 brings you some of the best rock talent in the country for a sonically exhilarating experience that will leave your senses absolutely spellbound! You won’t be able to resist banging your heads to the powerful beats and tapping your feet with the intense music; so overwhelmingly influencing will be the aura at this event! ",
+                "14 Feb", "8:00 pm", null, null, null, null, false));
+
+        proNightEvents.add(new Events("Pro Nights", "Livewire (Star Night)", "Sports Complex", "Live Wire is the main attraction of Engifest'2016 where a popular singer/band captivates the gigantic audience with their breathtaking music. The energy and enthusiasm around Live Wire is unmatched and the atmosphere is electric. Having featured popular singers like Mohit Chauhan in the past, Live Wire'16 will surely entrance and dazzle you. Get ready to be captivated by Live Wire'16, which will surely be a night you will never forget. ",
+                "13 Feb", "8:00 pm", null, null, null, null, false));
+
+        proNightEvents.add(new Events("Pro Nights", "EDM Night", "Sports Complex", "EDM- what once developed from a small culture and now one of the biggest music culture of the world.Hardwell, Garrix, Guetta being just a few names.\n" +
+                "With the catchy beats and the electrifying rhythm, Engifest 2k16 endeavors a night in our own campus, where each head will keep banging and every feet will groove under the electric sky. The moment when you'll realize EDM is not music anymore it's a lifestyle. YOLO..!!!",
+                "15 Feb", "8:00 pm", null, null, null, null, false));
+
+
+        SugarRecord.saveInTx(proNightEvents);
+
+
+
     }
 }
