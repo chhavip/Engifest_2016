@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 
 import com.dxtt.coolmenu.CoolMenuFrameLayout;
+import com.parse.Parse;
+import com.parse.ParseObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +29,11 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.menu_main_activity);
         coolMenuFrameLayout = (CoolMenuFrameLayout)findViewById(R.id.rl_main);
 
-            String[] titles = {"ABOUT US", "SPONSORS", "SCHEDULE", "EVENTS", "HOME"};
+//        ParseObject testObject = new ParseObject("TestObject");
+//        testObject.put("foo", "bar");
+//        testObject.saveInBackground();
+
+        String[] titles = {"ABOUT US", "SPONSORS", "SCHEDULE", "EVENTS", "HOME"};
         titleList = Arrays.asList(titles);
         coolMenuFrameLayout.setTitles(titleList);
 

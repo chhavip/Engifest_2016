@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+
+
+    <!-- Email Label -->
+    <com.github.jorgecastillo.FillableLoader
+        android:id="@+id/fillableLoader"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_height="200dp"
+        app:fl_originalWidth="650"
+        app:fl_originalHeight="600"
+        app:fl_strokeColor="#ffffff"
+        app:fl_fillColor="#610729"
+        android:layout_marginLeft="40dp"
+        app:fl_strokeWidth="2dp"
+        app:fl_strokeDrawingDuration="5000"
+        app:fl_fillDuration="5000"
+        app:fl_clippingTransform="waves" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/name"
+        android:layout_gravity="center"
+        android:hint="NAME"
+        />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/email"
+        android:background="@color/c_wild_blue_yonder"
+        android:layout_gravity="center">
+
+    </EditText>
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:text="Register"/>
+
+    <TextView android:id="@+id/link_signup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="No account yet? Create one"
+        android:gravity="center"
+        android:textSize="16dip"/>
+
+</LinearLayout>
+

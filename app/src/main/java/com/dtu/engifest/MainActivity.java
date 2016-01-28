@@ -3,6 +3,8 @@ package com.dtu.engifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.parse.ParseObject;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -15,6 +15,7 @@ import android.widget.ViewSwitcher;
 
 import com.hanks.htextview.HTextView;
 import com.hanks.htextview.HTextViewType;
+import com.parse.Parse;
 
 /**
  * Created by chhavi on 22/1/16.
@@ -26,6 +27,8 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
+        Parse.enableLocalDatastore(getApplicationContext());
+        Parse.initialize(getApplicationContext());
         final String[] sentences = new String[]{"THE WAIT", "IS OVER", "OVER"};
         setContentView(R.layout.splash_activity);
         hTextView = (HTextView) findViewById(R.id.text2);
@@ -33,7 +36,7 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
         hTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SplashActivity.this, MenuActivity.class));
+                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
                 finish();
             }
         });
@@ -61,7 +64,7 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, MenuActivity.class));
+                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
                 finish();
 
             }
