@@ -19,7 +19,7 @@ public class Events extends SugarRecord {
     ArrayList<Contact> contacts;
     String registerLink;
     boolean specialRequirements;
-
+    boolean comingSoon;
 
     public Events() {
     }
@@ -36,6 +36,28 @@ public class Events extends SugarRecord {
         this.contacts = contacts;
         this.registerLink = registerLink;
         this.specialRequirements = specialRequirements;
+
+    }
+ /*   public Events(String category, String name, String venue, String information, String date, String time, String fees, ArrayList<String> rules, ArrayList<Contact> contacts, String registerLink, boolean specialRequirements) {
+        this.category = category;
+        this.name = name;
+        this.venue = venue;
+        this.information = information;
+        this.date = date;
+        this.time = time;
+        this.fees = fees;
+        this.rules = rules;
+        this.contacts = contacts;
+        this.registerLink = registerLink;
+        this.specialRequirements = specialRequirements;
+
+    }*/
+    public Events(String category, String name, boolean comingSoon) {
+        this.category = category;
+        this.name = name;
+        this.comingSoon = comingSoon;
+
+
     }
 
     public String getCategory() {

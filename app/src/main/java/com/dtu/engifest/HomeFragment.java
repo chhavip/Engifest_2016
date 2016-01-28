@@ -1,8 +1,14 @@
 package com.dtu.engifest;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +58,22 @@ public class HomeFragment extends Fragment {
             sliderShow.setPresetTransformer(SliderLayout.Transformer.Accordion);
             sliderShow.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);
 
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isGoogleMapsInstalled()) {
+                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                            Uri.parse("http://maps.google.com/maps?daddr=28.749947,77.117028"));
+                  //  startActivity(intent);
+                    Snackbar.make(view, "Google Maps not installed", Snackbar.LENGTH_LONG).show();
 
+                }
+                else{
+                    Snackbar.make(view, "Google Maps not installed", Snackbar.LENGTH_LONG).show();
+                }
+            }
+        });
         return view;
     }
 
@@ -61,6 +82,19 @@ public class HomeFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
     }
 
+
+    public boolean isGoogleMapsInstalled()
+    {
+        try
+        {
+            ApplicationInfo info = getActivity().getPackageManager().getApplicationInfo("com.google.android.apps.maps", 0);
+            return true;
+        }
+        catch(PackageManager.NameNotFoundException e)
+        {
+            return false;
+        }
+    }
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

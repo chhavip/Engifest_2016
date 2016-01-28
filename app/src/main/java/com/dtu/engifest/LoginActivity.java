@@ -71,19 +71,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
 
-        String nameUser = "test";
+        String nameUser = "me";
         String emailUser = "shikhark211@gmail.com";
         Toast.makeText(mActivity, "onClick", Toast.LENGTH_SHORT).show();
         ParseUser user = new ParseUser();
         user.setUsername(nameUser);
         user.setPassword("testPassword");
         user.setEmail(emailUser);
-
+        Intent intent = new Intent(mActivity, MenuActivity.class);
+        startActivity(intent);
         user.signUpInBackground(new SignUpCallback() {
             public void done(ParseException e) {
                 if (e == null) {
-                    Intent intent = new Intent(mActivity, MenuActivity.class);
-                    startActivity(intent);
+
                     finish();
                     // Hooray! Let them use the app now.
                 } else {

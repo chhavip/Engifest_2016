@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dtu.engifest" >
+    package="com.dtu.engifest">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -11,12 +11,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.orm.SugarApp"
+        android:name=".EngifestApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="com.parse.APPLICATION_ID"
             android:value="88UCSoFuErHK6YUH6HdpRYUAqAuaFe4qlh4vIDeP" />
@@ -36,22 +36,19 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.dtu.engifest" />
 
-        <activity android:name=".MainActivity" >
-        </activity>
-        <activity android:name=".SplashActivity" >
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity" >
-        </activity>
+        <activity android:name=".MenuActivity"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
