@@ -18,6 +18,8 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.github.jorgecastillo.FillableLoader;
+import com.hanks.htextview.HTextView;
+import com.hanks.htextview.HTextViewType;
 
 import java.util.HashMap;
 
@@ -37,6 +39,12 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.home_fragment_layout, container, false);
 
         sliderShow = (SliderLayout) view.findViewById(R.id.slider);
+
+        /*HTextView about_engifest = (HTextView)view.findViewById(R.id.about_engifest);
+
+        String aboutEngi = "Thrill, joy and ecstasy are words that are synonymous with ENGIFEST";
+        about_engifest.setAnimateType(HTextViewType.PIXELATE);
+        about_engifest.animateText(aboutEngi);*/
 
         HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
         file_maps.put("Our campus", R.drawable.capmus);
