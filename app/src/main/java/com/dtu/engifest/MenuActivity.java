@@ -6,8 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 
 import com.dxtt.coolmenu.CoolMenuFrameLayout;
-import com.parse.Parse;
-import com.parse.ParseObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,12 +31,12 @@ public class MenuActivity extends AppCompatActivity {
 //        testObject.put("foo", "bar");
 //        testObject.saveInBackground();
 
-        String[] titles = {"ABOUT US", "SPONSORS", "SCHEDULE", "EVENTS", "HOME"};
+        String[] titles = {"SPONSORS", "ABOUT US", "SCHEDULE", "EVENTS", "HOME"};
         titleList = Arrays.asList(titles);
         coolMenuFrameLayout.setTitles(titleList);
 
         fragments.add(new Fragment1());
-        fragments.add(new Fragment2());
+        fragments.add(new AboutUsFragment());
         fragments.add(new SponsorsFragment());
         fragments.add(new Fragment4());
         fragments.add(new HomeFragment());

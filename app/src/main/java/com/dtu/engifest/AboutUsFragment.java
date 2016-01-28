@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 /**
  * Created by chhavi on 24/1/16.
  */
-public class Fragment2 extends Fragment {
+public class AboutUsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class Fragment2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout2, container, false);
+        View view = inflater.inflate(R.layout.about_us_fragment, container, false);
         return view;
     }
 
