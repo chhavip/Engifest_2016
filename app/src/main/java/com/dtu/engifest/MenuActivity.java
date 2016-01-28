@@ -31,9 +31,9 @@ public class MenuActivity extends AppCompatActivity {
         titleList = Arrays.asList(titles);
         coolMenuFrameLayout.setTitles(titleList);
 
-        fragments.add(new Fragment1());
-        fragments.add(new AboutUsFragment());
         fragments.add(new SponsorsFragment());
+        fragments.add(new AboutUsFragment());
+        fragments.add(new Fragment1());
         fragments.add(new EventsFragment());
         fragments.add(new HomeFragment());
 
