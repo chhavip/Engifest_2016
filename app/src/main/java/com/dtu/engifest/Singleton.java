@@ -30,13 +30,13 @@ public class Singleton {
     }
     public void initialiseDb(){
         List<Category> caregories = new ArrayList<>();
-        caregories.add(new Category( "Dance"));
-        caregories.add(new Category("Music"));
-        caregories.add(new Category ("Drama"));
+        caregories.add(new Category( "Dance", R.drawable.dance));
+        caregories.add(new Category("Music", R.drawable.music));
+        caregories.add(new Category ("Drama", R.drawable.drama));
         caregories.add(new Category("Fashion", R.drawable.fashion));
-        caregories.add(new Category("Pro Nights"));
-        caregories.add(new Category("Miscellaneous"));
-        caregories.add(new Category("Informal Events"));
+        caregories.add(new Category("Pro Nights", R.drawable.pro_nights));
+        caregories.add(new Category("Miscellaneous", R.drawable.misc));
+        caregories.add(new Category("Informal Events", R.drawable.inf));
 
         SugarRecord.saveInTx(caregories);
 

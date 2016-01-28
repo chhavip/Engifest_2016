@@ -23,7 +23,7 @@ public class Category extends SugarRecord {
         this.imageResource = imageResource;
     }
 
-    int imageResource = R.drawable.fashion;
+    int imageResource;
     public Category() {
     }
 
