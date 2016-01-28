@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 /**
  * Created by chhavi on 24/1/16.
  */
-public class Fragment3 extends Fragment {
+public class SponsorsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

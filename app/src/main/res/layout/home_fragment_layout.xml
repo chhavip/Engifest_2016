@@ -1,30 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/layout_1_colour"
+    >
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/layout_1_colour"
     android:orientation="vertical">
     <com.daimajia.slider.library.SliderLayout
         android:id="@+id/slider"
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         />
 
-    <com.github.jorgecastillo.FillableLoader
-        android:id="@+id/fillableLoader"
+
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:layout_height="300dp"
-        app:fl_originalWidth="650"
-        app:fl_originalHeight="600"
-        app:fl_strokeColor="#000000"
-        app:fl_fillColor="#610729"
-        android:layout_marginLeft="40dp"
-        app:fl_strokeWidth="2dp"
-        app:fl_strokeDrawingDuration="5000"
-        app:fl_fillDuration="5000"
-        app:fl_clippingTransform="waves" />
+        android:layout_margin="10dp"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:textSize="20sp"
+            android:layout_weight="8"
+
+            android:gravity="center_vertical"
+            android:text="Explore"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>
+</ScrollView>

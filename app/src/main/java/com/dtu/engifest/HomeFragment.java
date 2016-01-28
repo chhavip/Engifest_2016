@@ -29,10 +29,10 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment_layout, container, false);
-        FillableLoader fillableLoader = (FillableLoader) view.findViewById(R.id.fillableLoader);
+    /*    FillableLoader fillableLoader = (FillableLoader) view.findViewById(R.id.fillableLoader);
 
         fillableLoader.setSvgPath(getString(R.string.seventy_five_engi));
-        fillableLoader.start();
+        fillableLoader.start();*/
 
         sliderShow = (SliderLayout) view.findViewById(R.id.slider);
 
