@@ -3,8 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#014a7f"
+    android:background="@color/layout_1_colour"
     android:orientation="vertical">
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
 
     <com.github.jorgecastillo.FillableLoader
         android:id="@+id/fillableLoader"

@@ -30,6 +30,14 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
         setContentView(R.layout.splash_activity);
         hTextView = (HTextView) findViewById(R.id.text2);
 
+        hTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SplashActivity.this, MenuActivity.class));
+                finish();
+            }
+        });
+
         final Handler handler1 = new Handler();
         handler1.postDelayed(new Runnable() {
             @Override
@@ -54,6 +62,7 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
             @Override
             public void run() {
                 startActivity(new Intent(SplashActivity.this, MenuActivity.class));
+                finish();
 
             }
         }, 5000);
