@@ -1,5 +1,6 @@
 package com.dtu.engifest.models;
 
+import com.dtu.engifest.R;
 import com.orm.SugarRecord;
 
 /**
@@ -9,6 +10,11 @@ public class Category extends SugarRecord {
 
     String name;
 
+    public Category(String name, int imageResource) {
+        this.name = name;
+        this.imageResource = imageResource;
+    }
+
     public int getImageResource() {
         return imageResource;
     }
@@ -17,7 +23,7 @@ public class Category extends SugarRecord {
         this.imageResource = imageResource;
     }
 
-    int imageResource;
+    int imageResource = R.drawable.fashion;
     public Category() {
     }
 

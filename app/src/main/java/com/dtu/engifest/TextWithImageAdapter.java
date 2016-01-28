@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.dtu.engifest.models.Category;
 import com.dtu.engifest.models.Sponsors;
 import com.squareup.picasso.Picasso;
 
@@ -19,11 +20,11 @@ import java.util.List;
  */
 public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdapter.MyViewHolder> {
 
-    public List<Sponsors> list;
+    public List<Category> list;
     public int resId;
     Context context;
     boolean isSponsors;
-    public TextWithImageAdapter(List<Sponsors> list, int resId, Context context) {
+    public TextWithImageAdapter(List<Category> list, int resId, Context context) {
             this.list = list;
             this.resId = resId;
         if(resId == R.layout.card_with_text_and_image)  {
@@ -47,7 +48,8 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
             Picasso.with(context).load(list.get(position).getImageResource()).into(holder.imageView);
         }
         else {
-            Picasso.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
+            Sponsors sponsors = (Sponsors)list.get(position);
+            Picasso.with(context).load(sponsors.getImageUrl()).into(holder.imageView);
         }
 
 

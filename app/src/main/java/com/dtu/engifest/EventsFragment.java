@@ -11,9 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dtu.engifest.models.Category;
+import com.dtu.engifest.models.Events;
 import com.dtu.engifest.models.Sponsors;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by chhavi on 24/1/16.
@@ -21,7 +23,7 @@ import java.util.ArrayList;
 public class EventsFragment extends Fragment {
 
     RecyclerView eventCategoryRecycler;
-    ArrayList<Sponsors> eventCategoryList;
+    ArrayList<Category> eventCategoryList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,15 @@ public class EventsFragment extends Fragment {
     }
 
     private void addEventCategories() {
-        Sponsors eventCategory = new Sponsors();
+
+        List<Category> categories = Category.listAll(Category.class);
+        for(Category category:categories){
+            Category eventCategory = new Category();
+            eventCategory.setName(category.getName());
+            eventCategory.setImageResource(category.getImageResource());
+            eventCategoryList.add(eventCategory);
+        }
+  /*      Sponsors eventCategory = new Sponsors();
         eventCategory.setName("Dance");
         eventCategory.setImageResource(R.drawable.campus_grass);
         eventCategoryList.add(eventCategory);
@@ -51,6 +61,27 @@ public class EventsFragment extends Fragment {
         eventCategory.setName("Music");
         eventCategory.setImageResource(R.drawable.capmus);
         eventCategoryList.add(eventCategory);
+        eventCategory.setName("Fashion");
+        eventCategory.setImageResource(R.drawable.capmus);
+        eventCategoryList.add(eventCategory);
+        eventCategory.setName("Music");
+        eventCategory.setImageResource(R.drawable.capmus);
+        eventCategoryList.add(eventCategory);
+        eventCategory.setName("Music");
+        eventCategory.setImageResource(R.drawable.capmus);
+        eventCategoryList.add(eventCategory);
+        eventCategory.setName("Music");
+        eventCategory.setImageResource(R.drawable.capmus);
+        eventCategoryList.add(eventCategory);
+        eventCategory.setName("Music");
+        eventCategory.setImageResource(R.drawable.capmus);
+        eventCategoryList.add(eventCategory);
+        eventCategory.setName("Music");
+        eventCategory.setImageResource(R.drawable.capmus);
+        eventCategoryList.add(eventCategory);
+        eventCategory.setName("Music");
+        eventCategory.setImageResource(R.drawable.capmus);
+        eventCategoryList.add(eventCategory);*/
     }
 
     @Override
