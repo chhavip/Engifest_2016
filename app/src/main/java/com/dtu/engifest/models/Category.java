@@ -9,6 +9,15 @@ public class Category extends SugarRecord {
 
     String name;
 
+    public int getImageResource() {
+        return imageResource;
+    }
+
+    public void setImageResource(int imageResource) {
+        this.imageResource = imageResource;
+    }
+
+    int imageResource;
     public Category() {
     }
 

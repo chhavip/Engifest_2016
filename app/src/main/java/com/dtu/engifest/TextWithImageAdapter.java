@@ -5,35 +5,51 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.dtu.engifest.models.Sponsors;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 /**
  * Created by chhavi on 28/1/16.
  */
-public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdapter.Holder> {
+public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdapter.MyViewHolder> {
 
     public List<Sponsors> list;
-    public int Resid;
+    public int resId;
     Context context;
-
-    public TextWithImageAdapter(List<Sponsors> list, int resid, Context context) {
+    boolean isSponsors;
+    public TextWithImageAdapter(List<Sponsors> list, int resId, Context context) {
             this.list = list;
-            this.Resid = resid;
+            this.resId = resId;
+        if(resId == R.layout.card_with_text_and_image)  {
+            isSponsors = true;
+        }
             this.context = context;
     }
 
     @Override
-    public TextWithImageAdapter.Holder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(context).inflate(Resid, null, false);
+    public TextWithImageAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(context).inflate(resId, null, false);
 
-        return new Holder(itemView);
+        return new MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(TextWithImageAdapter.Holder holder, int position) {
+    public void onBindViewHolder(TextWithImageAdapter.MyViewHolder holder, int position) {
+
+        holder.name.setText(list.get(position).getName());
+        if(!isSponsors) {
+            Picasso.with(context).load(list.get(position).getImageResource()).into(holder.imageView);
+        }
+        else {
+            Picasso.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
+        }
+
 
     }
 
@@ -41,10 +57,16 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
     public int getItemCount() {
         return list.size();
     }
-    public static class Holder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView name;
+        ImageView imageView;
 
-        public Holder(View itemView) {
+        public MyViewHolder(View itemView) {
             super(itemView);
+            imageView = (ImageView) itemView.findViewById(R.id.background_image_view);
+            name = (TextView) itemView.findViewById(R.id.event_name);
         }
+
+
     }
 }

@@ -3,33 +3,33 @@ package com.dtu.engifest.models;
 /**
  * Created by chhavi on 28/1/16.
  */
-public class Sponsors  {
-    String title;
+public class Sponsors extends Category {
+//    String title;
     String imageUrl;
-
+//    int imageResource;
     public Sponsors(String title, String imageUrl) {
-        this.title = title;
+        super.setName(title);
         this.imageUrl = imageUrl;
 
     }
-    public Sponsors(String title, int imageUrl) {
-        this.title = title;
-        this.imageResource = imageUrl;
+    public Sponsors(String title, int imageResource) {
+        super.setName(title);
+        super.setImageResource(imageResource);
 
     }
     public Sponsors(String title) {
-        this.title = title;
+        super.setName(title);
 
     }
     public Sponsors() {
 
     }
     public int getImageResource() {
-        return imageResource;
+        return super.getImageResource();
     }
 
     public void setImageResource(int imageResource) {
-        this.imageResource = imageResource;
+        super.setImageResource(imageResource);
     }
 
     public String getImageUrl() {
@@ -40,14 +40,13 @@ public class Sponsors  {
         this.imageUrl = imageUrl;
     }
 
-    public String getTitle() {
-        return title;
-    }
+//    public String getTitle() {
+//        return super.getName();
+//    }
+//
+//    public void setTitle(String title) {
+//        super.setName(title);
+//    }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    int imageResource;
 
 }
