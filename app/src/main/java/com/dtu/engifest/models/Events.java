@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 public class Events extends SugarRecord {
     String category;
+    Sponsors sponsor;
     String name;
     String venue;
     String information;
@@ -27,6 +28,8 @@ public class Events extends SugarRecord {
 
     public Events(String category, String name, String venue, String information, String date, String time, String fees, ArrayList<String> rules, ArrayList<Contact> contacts, String registerLink, boolean specialRequirements) {
         this.category = category;
+        Sponsors sponsorsa = new Sponsors(category);
+        this.sponsor = sponsorsa;
         this.name = name;
         this.venue = venue;
         this.information = information;
