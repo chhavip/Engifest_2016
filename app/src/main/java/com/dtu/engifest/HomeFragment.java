@@ -65,12 +65,13 @@ public class HomeFragment extends Fragment {
                 if(isGoogleMapsInstalled()) {
                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                             Uri.parse("http://maps.google.com/maps?daddr=28.749947,77.117028"));
-                  //  startActivity(intent);
-                    Snackbar.make(view, "Google Maps not installed", Snackbar.LENGTH_LONG).show();
+                    startActivity(intent);
+
 
                 }
                 else{
                     Snackbar.make(view, "Google Maps not installed", Snackbar.LENGTH_LONG).show();
+
                 }
             }
         });

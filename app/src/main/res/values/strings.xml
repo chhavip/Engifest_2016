@@ -82,4 +82,5 @@
     </string>
     <string name="title_activity_login">Register</string>
     <string name="title_activity_main22">Main22Activity</string>
+    <string name="title_activity_event_detail">EventDetail</string>
 </resources>
