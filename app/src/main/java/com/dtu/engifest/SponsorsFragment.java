@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +30,7 @@ public class SponsorsFragment extends Fragment {
     RecyclerView sponsorsRecycler;
     ArrayList<Sponsors> sponsorsList;
     TextWithImageAdapter myAdapter;
+    StaggeredGridLayoutManager staggeredGridLayoutManager;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +43,10 @@ public class SponsorsFragment extends Fragment {
         sponsorsList = new ArrayList<>();
         addSponsors();
         sponsorsRecycler = (RecyclerView) view.findViewById(R.id.cardList);
+        staggeredGridLayoutManager = new StaggeredGridLayoutManager(3, 1);
+        sponsorsRecycler.setLayoutManager(staggeredGridLayoutManager);
         myAdapter = new TextWithImageAdapter(sponsorsList, R.layout.card_with_text_and_image, getActivity());
         sponsorsRecycler.setAdapter(myAdapter);
-        sponsorsRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
     }
 
@@ -66,8 +69,6 @@ public class SponsorsFragment extends Fragment {
             }
         });
         Sponsors sponsors = new Sponsors();
-        sponsors.setName("Pepsi");
-        sponsors.setImageUrl("http://vignette2.wikia.nocookie.net/logopedia/images/1/15/Pepsi_2007.png/revision/latest?cb=20140327110444");
         sponsorsList.add(sponsors);
     }
 

@@ -25,8 +25,8 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
     Context context;
     boolean isSponsors;
     public TextWithImageAdapter(List<Sponsors> list, int resId, Context context) {
-        this.list = list;
-        this.resId = resId;
+            this.list = list;
+            this.resId = resId;
         if(resId == R.layout.card_with_text_and_image)  {
             isSponsors = true;
         }
@@ -48,7 +48,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
             Picasso.with(context).load(list.get(position).getImageResource()).into(holder.imageView);
         }
         else {
-            Sponsors sponsors = (Sponsors)list.get(position);
+            Sponsors sponsors = list.get(position);
             Picasso.with(context).load(sponsors.getImageUrl()).into(holder.imageView);
         }
 

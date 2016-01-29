@@ -8,12 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.jorgecastillo.FillableLoader;
-
 /**
  * Created by chhavi on 24/1/16.
  */
-public class Fragment1 extends Fragment {
+public class ScheduleFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +20,7 @@ public class Fragment1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout1, container, false);
+        View view = inflater.inflate(R.layout.schedule_fragment_layout, container, false);
 
         return view;
     }

@@ -33,7 +33,7 @@ public class MenuActivity extends AppCompatActivity {
 
         fragments.add(new SponsorsFragment());
         fragments.add(new AboutUsFragment());
-        fragments.add(new Fragment1());
+        fragments.add(new ScheduleFragment());
         fragments.add(new EventsFragment());
         fragments.add(new HomeFragment());
 
