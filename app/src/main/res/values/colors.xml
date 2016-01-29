@@ -8,5 +8,6 @@
     <color name="layout_3_colour">#B53804</color>
     <color name="layout_4_colour">#F88E0E</color>
     <color name="layout_5_colour">#A62B1F</color>
+    <color name="button_colour">@color/c_pinklavender</color>
 
 </resources>

@@ -5,16 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:id="@+id/cordinator_layout"
+    android:background="@color/c_red_ncs"
     tools:context="com.dtu.engifest.EventDetail">
 
-  <!--  <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-
-
-    </android.support.design.widget.AppBarLayout>-->
 
     <include layout="@layout/content_event_detail" />
 

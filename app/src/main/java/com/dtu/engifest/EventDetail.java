@@ -3,19 +3,28 @@ package com.dtu.engifest;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.dtu.engifest.models.Events;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import java.util.List;
 
@@ -26,7 +35,11 @@ public class EventDetail extends AppCompatActivity {
     private TextView venue;
     private TextView time;
     private TextView description;
+    private ImageView image;
     private Button contacts;
+    private LinearLayout linearLayout;
+    private CoordinatorLayout coordinatorLayout;
+//    ImageView background;
     private Button rules;
     private Button register;
 
@@ -34,7 +47,6 @@ public class EventDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_detail);
-
         String name = getIntent().getExtras().getString("name");
         List<Events> events = Events.find(Events.class, "name = ?", name);
 
@@ -45,6 +57,10 @@ public class EventDetail extends AppCompatActivity {
         time = (TextView)findViewById(R.id.release_date);
         description = (TextView)findViewById(R.id.movie_synopsis);
         venue = (TextView)findViewById(R.id.time);
+        image = (ImageView)findViewById(R.id.movie_poster);
+        linearLayout = (LinearLayout)findViewById(R.id.immgB);
+        coordinatorLayout = (CoordinatorLayout)findViewById(R.id.cordinator_layout);
+//        background = (ImageView)findViewById(R.id.imageBg);
 
         rules = (Button)findViewById(R.id.rules_button);
         contacts = (Button)findViewById(R.id.contacts_button);
@@ -60,8 +76,39 @@ public class EventDetail extends AppCompatActivity {
         title.setText(event.getName());
         date.setText(event.getDate());
         time.setText(event.getTime());
-        description.setText(event.getInformation());
+        if(event.getInformation()!=null) {
+            description.setText(event.getInformation());
+        }else{
+            description.setVisibility(View.GONE);
+        }
         venue.setText(event.getVenue());
+        Picasso.with(this)
+                .load(event.getImageUrl())
+                .into(new Target() {
+                    @Override
+                    public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
+            /* Save the bitmap or do something with it here */
+
+                        //Set it in the ImageView
+                        image.setImageBitmap(bitmap);
+                        coordinatorLayout.setBackgroundColor(getVibrantColor(bitmap));
+                    }
+
+                    @Override
+                    public void onBitmapFailed(Drawable errorDrawable) {
+
+                    }
+
+                    @Override
+                    public void onPrepareLoad(Drawable placeHolderDrawable) {
+
+                    }
+                });
+/*
+        Picasso.with(this).load("url").into(target);
+        Picasso.with(EventDetail.this).load(event.getImageUrl()).into(image);
+        ;*/
+//        Picasso.with(EventDetail.this).load(event.getImageUrl()).into(background);
         if(event.isComingSoon()){
             description.setText("Coming Soon!");
         }
@@ -91,8 +138,7 @@ public class EventDetail extends AppCompatActivity {
                         i.addCategory("android.intent.category.LAUNCHER");
                         i.setData(Uri.parse(url));
                         startActivity(i);
-                    }
-                    catch(ActivityNotFoundException e) {
+                    } catch (ActivityNotFoundException e) {
                         // Chrome is not installed
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                         startActivity(i);
@@ -104,6 +150,28 @@ public class EventDetail extends AppCompatActivity {
             register.setVisibility(View.GONE);
         }
 
+
+
+
+    }
+
+    public int getVibrantColor(Bitmap bitmap) {
+
+       /* BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();*/
+
+        Palette p = Palette.generate(bitmap);
+
+        int color = p.getLightVibrantColor(EventDetail.this.getResources().getColor(R.color.colorPrimaryDark));
+        setButtonBackground(p.getLightMutedColor(getResources().getColor(R.color.button_colour)));
+
+
+        return color;
+    }
+    public void setButtonBackground(int color){
+        register.setBackgroundColor(color);
+        contacts.setBackgroundColor(color);
+        rules.setBackgroundColor(color);
     }
 
 }
