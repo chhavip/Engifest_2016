@@ -60,7 +60,7 @@ public class Events extends SugarRecord {
 
 
     }
-    public Events(String category, String name, String venue, String information, String date, String time, String fees,String rules, ArrayList<Contact> contacts, String registerLink, boolean specialRequirements, String imageUrl) {
+    public Events(String category, String name, String venue, String information, String date, String time, String fees,String rules, String contacts, String registerLink, boolean specialRequirements, String imageUrl) {
         this.category = category;
         this.name = name;
         this.venue = venue;

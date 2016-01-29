@@ -43,7 +43,8 @@ public class Singleton {
 
         List<Events> danceEvents = new ArrayList<>();
         String rules;
-        ArrayList<Contact> contacts = new ArrayList<Contact>();
+        String contacts;
+//        ArrayList<Contact> contacts = new ArrayList<Contact>();
         rules = "1. There will be two rounds The first one will be video shortlisting and the second will be the final performance on the campus premises.\n" +
                 "2. Only college students are allowed.\n" +
                 "3. Last date of online registration is 08/02/16. On the spot registrations will not be entertained.\n" +
@@ -53,6 +54,10 @@ public class Singleton {
                 "7. All the participants are required to carry their identity cards to the campus on the day of the event.\n" +
                 "8. The organizing committee reserves the right to change the venue, time and rules, if required.\n" +
                 "9. The decision of the judges will be final and binding. ";
+        contacts = "Surabhi Seth +91-9971819013 \n" +
+                "Saurabh Suman +91-9582317061 \n" +
+                "Achal Yadav +91-8376054139 \n" +
+                "Pooja Gupta +91-7838724227";
         danceEvents.add(new Events("Dance", "Spandan (Solo)", "OAT", "Dance is the language of the soul and ENGIFEST'16 gives every soul a beautiful platform to express, a competitive environment for every dancer to showcase their talent.Calling out to all dance enthusiasts to dance their hearts out. Whatever your style be - jazz, hip hop, contemporary, classical or freestyle, SPANDAN gives you a chance to showcase your hidden talent and passion. ", "13th Feb"
                 , "10 AM", "100/team", rules, contacts, "https://docs.google.com/forms/d/1toE-wWFwzpsZRdIHI_qy15BznyKX6Xb2JWWXqqU_La4/viewform?c=0&w=1&usp=send_form", false, "http://engifest.dtu.ac.in/events/spandan-solo/spandan%28solo%29.jpg"));
 
@@ -63,6 +68,10 @@ public class Singleton {
                 "5. No responsibility will be held by DTU for any late or lost entries or any such events.\n" +
                 "6. Team size should not be more than 20. However there must be at least 6 members on stage at any point during the performance.";
 
+        contacts = "Surabhi Seth +91-9971819013 \n" +
+                "Saurabh Suman +91-9582317061 \n" +
+                "Achal Yadav +91-8376054139 \n" +
+                "Pooja Gupta +91-7838724227";
         danceEvents.add(new Events("Dance", "Spandan (Group)", "BR Ambedkar Auditorium", "Dancing together is different feet moving to the same beats. So move your feet in synergy and leave a lasting impression on the audience. We invite you to a fleeting moment where you feel alive, to enchant the crowd with your vibrant rhythm and to claim the Spandan crown. ",
                 "14th Feb", "12:00 pm", " 300 / team", rules, contacts, "https://docs.google.com/forms/d/1bn0BW9Z1LpaZpHkkFtc6SbeHUtkKoBIbLF35VmZy-go/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/spandan-group/spandan(group).jpg"));
 
@@ -110,10 +119,13 @@ public class Singleton {
                 "Special lighting\n" +
                 "\n" +
                 "In case of conflicts, decision of the judges would be considered final and binding\n";
+        contacts = "Surabhi Seth +91-9971819013 \n" +
+                "Saurabh Suman +91-9582317061 \n" +
+                "Achal Yadav +91-8376054139 \n" +
+                "Pooja Gupta +91-7838724227";
         danceEvents.add(new Events("Dance", "Anushthan", "BR Ambedkar Auditorium", "While Indian classical dance is an umbrella term for various codified art forms rooted in sacred Hindu musical theatre styles, the term “Folk dance” describes all forms of folk and tribal dances in regions across India. While Indian classical dance was considered a higher form of art and was practiced in courts, temples and on special occasions, folk dance forms were and are still practiced in groups in rural areas as an expression of the daily work and rituals of the common people during festivals. ",
                 "13th Feb", "11:00 am", "  300/- per team\n" +
                 "    100/- per individual ", rules, contacts, "https://docs.google.com/forms/d/14BSTpjPltUJ6PtsajHY8R6HsdkO_ZVChDyg3RY780wg/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/anushthan/11058440_871279442935379_7185984909711420466_o.jpg"));
-
 
         danceEvents.add(new Events("Dance", "STFU", true));
 
@@ -145,6 +157,9 @@ public class Singleton {
                 "4. A standard 5-piece drum kit, keyboard stand, cables and Microphones will be provided.\n" +
                 "5. Vocal Processors are not allowed; any band using vocal processors will be disqualified straightaway.\n" +
                 "6. The decision of the judges would be final and irreversible. ";
+        contacts = "Rohan Raj +91-8800583640\n" +
+                "Tathaghat Jha +91-8585922147\n" +
+                "Sopandev Tiwari +91-9811537333";
 
         musicEvents.add(new Events("Music", "Battle Of Bands", "OAT", "“It's all about the game and how you play it\n" +
                 "All about control and if you can take it”\n" +
@@ -161,6 +176,9 @@ public class Singleton {
                 "4. Purely classical songs are not allowed.\n" +
                 "Judging Criteria\n" +
                 "Quality of singing, creativity, vocal range, clarity in lyrics and overall impact.";
+        contacts = "Nikil James Paul +91-9643617174\n" +
+                "Suhail Subair +91-7042673847\n" +
+                "Yash Chauhan +91-9555650014";
         musicEvents.add(new Events("Music", "Engi Idol", "Convocation Hall", "Let your notes mesmerize everyone and win all hearts. If you've got the sur, the lay and the taal, let them do your talking.\n" +
                 "Registration has to be done ONLINE ONLY. There will be NO on the spot registration. ",
                 "13 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/13A53aS8Zl8Ap0n8tn65dokbdKwiPEuEXNf3QkjMgZYs/viewform?c=0&w=1&usp=send_form", false, "http://engifest.dtu.ac.in/events/engi-idol/1599855_667435116653147_1953477379_o.jpg"));
@@ -174,6 +192,10 @@ public class Singleton {
                 "5. Beat-boxing is allowed.\n" +
                 "Judging Criteria\n" +
                 "Vocal dynamics, originality, creativity, coordination and overall impact. ";
+        contacts = "Nikil James Paul +91-9643617174\n" +
+                "Suhail Subair +91-7042673847\n" +
+                "Yash Chauhan +91-9555650014";
+
         musicEvents.add(new Events("Music", "Vrind", "Convocation Hall", "Come, sing and conquer our hearts, because if it is music you're all about and melody's your weapon,then we're all up for it.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from a group should register. ",
                 " 13 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/14aTV6lFailmgKX-byD2tM9FcOF8VWVTGIdihWZwkHaY/viewform?c=0&w=1&usp=send_form", false, "http://engifest.dtu.ac.in/events/vrind/vrind.jpg"));
@@ -189,6 +211,10 @@ public class Singleton {
                 "4. Rap not allowed.\n" +
                 "Judging Criteria\n" +
                 "Quality of singing, creativity, vocal range, clarity in lyrics and overall impact.";
+        contacts = "Nikil James Paul +91-9643617174\n" +
+                "Suhail Subair +91-7042673847\n" +
+                "Yash Chauhan +91-9555650014";
+
         musicEvents.add(new Events("Music", "Vocalicious", "Convocation Hall", "Does your hand itch to reach out for the mike? Is the stage your second home and the audience your second family? Then come, be a part of Vocalicious. The stage awaits you.\n" +
                 "Registration has to be done ONLINE ONLY. There will be NO on the spot registration. ",
                 "15 Feb", "10:00 am", null, rules, contacts, null, false, "http://engifest.dtu.ac.in/events/vocalicious/1966027_687808047949187_4492048074217824304_o.jpg"));
@@ -196,6 +222,10 @@ public class Singleton {
 
 
         rules = "";
+        contacts = "Nikil James Paul +91-9643617174\n" +
+                "Suhail Subair +91-7042673847\n" +
+                "Yash Chauhan +91-9555650014";
+
         musicEvents.add(new Events("Music", "Battle Of Bands", "OAT", "“It's all about the game and how you play it\n" +
                 "All about control and if you can take it”\n" +
                 "If these lines instantly remind you of a deep, husky low-pitched growl, you have arrived at the right spot.\n" +
@@ -212,6 +242,10 @@ public class Singleton {
                 "6. Beat-boxing is allowed.\n" +
                 "Judging Criteria\n" +
                 "Vocal dynamics, originality, creativity, coordination and overall impact.";
+        contacts = "Nikil James Paul +91-9643617174\n" +
+                "Suhail Subair +91-7042673847\n" +
+                "Yash Chauhan +91-9555650014";
+
         musicEvents.add(new Events("Music", "Balladeers", "Convocation Hall",  "You're a note when you're alone, but a whole symphony when a group. Come, bring your harmonies to the stage and enthrall everyone with your compositions.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from a group should register.",
                 "15 Feb", "10:00 am", null, rules, contacts,"https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1" ,false, "http://engifest.dtu.ac.in/events/balladeers/balladeers.jpg"));
@@ -225,6 +259,9 @@ public class Singleton {
                 "6. Beat boxing is allowed.\n" +
                 "Judging Criteria\n" +
                 "Originality, creativity, coordination and overall impact.";
+        contacts = "Himanshu Makhija +91-9999727206\n" +
+                "Shikhar Sachdeva +91-8447403102";
+
         musicEvents.add(new Events("Music", "Three's A Show", "OAT", "They say the best things in life come in threes. If you three think you're one of those things, you have the stage. Show us your magic.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from the team should register. ",
                 "14 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/three's-a-show/three.jpg"));
@@ -241,6 +278,8 @@ public class Singleton {
                 "5. Teams are expected to perform at an open air venue, on a circular stage with audience all around.\n" +
                 "6. No electrical appliances shall be allowed during the performance, whether inside or outside the circle of performance.\n" +
                 "7. Only live music is allowed. Teams will have to bring their own instruments - no instrument shall be provided.";
+        contacts = "Vineet Maurya +91-9810383175 \n" +
+                "Vaibhav Chauhan +91-9968733717 ";
 
         dramaEvents.add(new Events("Drama", "Nukkad", "Mech C Parking", "With any part you play there is a certain amount of yourself in it. There has tobe,otherwise it’s not acting.It’s lying.”The deep message wrapped in emotions, humor and energy is what nukkad is known for.The artists shall roar till their message spreads farand wide. ",
                 "13th Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1IyIiw3fiNSSAOkN4RqRG9r7RntglpPSZNGL_BNcoa34/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/nukkad/nukkad.jpg"));
@@ -253,6 +292,9 @@ public class Singleton {
                 "4. Stage Play comprises of multiple scenes and may have blackouts.\n" +
                 "5. Backstage voiceovers and narrations are allowed during the performance.\n" +
                 "6. Pre-recorded music is allowed and should be brought in a CD/DVD or a pen drive in .cda or .mp3 format only. (Other FORMATs may not be supported on the computer – use them at your own risk).";
+        contacts = "Himanshu Makhija +91-9999727206\n" +
+                "Shikhar Sachdeva +91-8447403102";
+
         dramaEvents.add(new Events("Drama", "Natya", "BR Ambedkar Auditorium", null,
                 "15th Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1u9UKgopLJuaWRgbSPhCp9LU_672BO_1Dhi1kxK9cRmo/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/natya/natya%20brochure.jpg"));
 
@@ -273,6 +315,9 @@ public class Singleton {
                 "9. Teams will be judged based on costumes, theme, walking stance and attitude.\n" +
                 "10. Decision of the judges will be final and no discussion shall be held over it.\n" +
                 "11. Creating nuisance ,consumption of alcohol smoking etc will lead to the debarment of the team. ";
+
+        contacts = "Shubham Tyagi +91-8882653317 \n" +
+                "Nalin Choudhary +91-8588001179 ";
 
         fashionEvents.add(new Events("Fashion", "Paridhan", "Sports Complex", "If you think you have it in you to set fire to the stage with thousands of eyes on each perfectly choreographed step you take on the ramp, this is where you belong ",
                 "14th Feb", " 3:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1APUs55t67Me-nrSeuxViJEwPj9aoPQkRC--pFRI_11g/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/paridhan/paridhan.jpg"));
@@ -316,6 +361,9 @@ public class Singleton {
                 "3. No other languages will be allowed.\n" +
                 "4. Please note that we will not be responsible for postal delays, losses or damages–make sure you send in entries sufficiently before the deadline.\n" +
                 "5. You may use any video camera you deem suitable for shooting the movie.";
+        contacts = "Adil Haris +91-7042364785 \n" +
+                "Ayush Goel +91-9999888200 ";
+
         miscEvents.add(new Events("Miscellaneous", "Kaleidoscope", "Edusat Hall",  "Short film making competition, where the theme will be provided a month before engifest. Handpicked Entries will be screened at the venue with the presence of the judges. ",
                 "14th Feb", "10:00 am", null, rules, contacts, "https://goo.gl/forms/fZuODXpy9B", false, "http://engifest.dtu.ac.in/events/kaleidoscope/11163111_887505434646113_4947505584396171817_o.jpg"));
 
