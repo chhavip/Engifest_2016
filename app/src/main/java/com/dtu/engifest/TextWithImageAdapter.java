@@ -1,7 +1,9 @@
 package com.dtu.engifest;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.dtu.engifest.models.Category;
+import com.dtu.engifest.models.Events;
 import com.dtu.engifest.models.Sponsors;
 import com.squareup.picasso.Picasso;
 
@@ -23,6 +27,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
     public List<Sponsors> list;
     public int resId;
     Context context;
+    View myView;
     boolean isSponsors;
     public TextWithImageAdapter(List<Sponsors> list, int resId, Context context) {
             this.list = list;
@@ -41,15 +46,49 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
     }
 
     @Override
-    public void onBindViewHolder(TextWithImageAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(TextWithImageAdapter.MyViewHolder holder, final int position) {
+        final Sponsors sponsors = list.get(position);
 
         holder.name.setText(list.get(position).getName());
         if(!isSponsors) {
             Picasso.with(context).load(list.get(position).getImageResource()).into(holder.imageView);
+            myView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    List<Events> eventses = Events.find(Events.class, "category = ?", sponsors.getName());
+                    Log.e("sa", eventses.get(0).getName());
+                    String[] items = new String[eventses.size()];
+                    for (int i = 0; i < eventses.size(); i++) {
+                        items[i] = eventses.get(i).getName();
+                    }
+
+                    if (eventses.size() != 0) {
+                        new MaterialDialog.Builder(context)
+                                .title("Events")
+                                .items(items)
+                                .itemsCallback(new MaterialDialog.ListCallback() {
+                                    @Override
+                                    public void onSelection(MaterialDialog dialog, View view, int position, CharSequence text) {
+
+
+                                        context.startActivity(new Intent(context, EventDetail.class).putExtra("name", text));
+
+                                    }
+                                })
+                                .show();
+
+                    }
+                }
+
+            });
+
+
+
         }
         else {
-            Sponsors sponsors = list.get(position);
-            Picasso.with(context).load(sponsors.getImageUrl()).into(holder.imageView);
+
+            Sponsors sponsor = (Sponsors)list.get(position);
+            Picasso.with(context).load(sponsor.getImageUrl()).into(holder.imageView);
         }
 
 
@@ -67,6 +106,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.background_image_view);
             name = (TextView) itemView.findViewById(R.id.event_name);
+            myView = itemView;
         }
 
 

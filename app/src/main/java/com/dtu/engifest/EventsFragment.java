@@ -53,35 +53,7 @@ public class EventsFragment extends Fragment {
             eventCategory.setImageResource(category.getImageResource());
             eventCategoryList.add(eventCategory);
         }
-  /*      Sponsors eventCategory = new Sponsors();
-        eventCategory.setName("Dance");
-        eventCategory.setImageResource(R.drawable.campus_grass);
-        eventCategoryList.add(eventCategory);
-        eventCategory = new Sponsors();
-        eventCategory.setName("Music");
-        eventCategory.setImageResource(R.drawable.capmus);
-        eventCategoryList.add(eventCategory);
-        eventCategory.setName("Fashion");
-        eventCategory.setImageResource(R.drawable.capmus);
-        eventCategoryList.add(eventCategory);
-        eventCategory.setName("Music");
-        eventCategory.setImageResource(R.drawable.capmus);
-        eventCategoryList.add(eventCategory);
-        eventCategory.setName("Music");
-        eventCategory.setImageResource(R.drawable.capmus);
-        eventCategoryList.add(eventCategory);
-        eventCategory.setName("Music");
-        eventCategory.setImageResource(R.drawable.capmus);
-        eventCategoryList.add(eventCategory);
-        eventCategory.setName("Music");
-        eventCategory.setImageResource(R.drawable.capmus);
-        eventCategoryList.add(eventCategory);
-        eventCategory.setName("Music");
-        eventCategory.setImageResource(R.drawable.capmus);
-        eventCategoryList.add(eventCategory);
-        eventCategory.setName("Music");
-        eventCategory.setImageResource(R.drawable.capmus);
-        eventCategoryList.add(eventCategory);*/
+
     }
 
     @Override

@@ -1,9 +1,16 @@
 package com.dtu.engifest;
 
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.dxtt.coolmenu.CoolMenuFrameLayout;
 
@@ -51,5 +58,35 @@ public class MenuActivity extends AppCompatActivity {
         };
         coolMenuFrameLayout.setAdapter(adapter);
 
+
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isGoogleMapsInstalled()) {
+                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                            Uri.parse("http://maps.google.com/maps?daddr=28.749947,77.117028"));
+                    startActivity(intent);
+
+
+                } else {
+                    Snackbar.make(view, "Google Maps not installed", Snackbar.LENGTH_LONG).show();
+
+                }
+            }
+        });
+
+    }
+    public boolean isGoogleMapsInstalled()
+    {
+        try
+        {
+            ApplicationInfo info = getPackageManager().getApplicationInfo("com.google.android.apps.maps", 0);
+            return true;
+        }
+        catch(PackageManager.NameNotFoundException e)
+        {
+            return false;
+        }
     }
 }

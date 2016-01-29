@@ -44,4 +44,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.+'
     compile 'com.android.support:design:23.1.1'
     compile 'me.grantland:autofittextview:0.2.+'
+
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.3@aar') {
+        transitive = true
+    }
 }
