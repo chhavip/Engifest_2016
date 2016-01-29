@@ -42,9 +42,9 @@ public class Singleton {
         SugarRecord.saveInTx(caregories);
 
         List<Events> danceEvents = new ArrayList<>();
-        ArrayList<String> rules = new ArrayList<String>();
+        String rules;
         ArrayList<Contact> contacts = new ArrayList<Contact>();
-        rules.add("1. There will be two rounds The first one will be video shortlisting and the second will be the final performance on the campus premises.\n" +
+        rules = "1. There will be two rounds The first one will be video shortlisting and the second will be the final performance on the campus premises.\n" +
                 "2. Only college students are allowed.\n" +
                 "3. Last date of online registration is 08/02/16. On the spot registrations will not be entertained.\n" +
                 "4. Any props/costumes if to be used should be arranged by the participants. Use of fire or any other inflammable object is restricted.\n" +
@@ -52,23 +52,23 @@ public class Singleton {
                 "6. Qualified participants have to ensure that one copy of their edited song is with the event head and one copy they should carry with them. Song should be in .mp3 format. Also, it is the contestant's duty to be careful and aware of the order of performance and should be present 15 minutes before the allotted time.\n" +
                 "7. All the participants are required to carry their identity cards to the campus on the day of the event.\n" +
                 "8. The organizing committee reserves the right to change the venue, time and rules, if required.\n" +
-                "9. The decision of the judges will be final and binding. ");
+                "9. The decision of the judges will be final and binding. ";
         danceEvents.add(new Events("Dance", "Spandan (Solo)", "OAT", "Dance is the language of the soul and ENGIFEST'16 gives every soul a beautiful platform to express, a competitive environment for every dancer to showcase their talent.Calling out to all dance enthusiasts to dance their hearts out. Whatever your style be - jazz, hip hop, contemporary, classical or freestyle, SPANDAN gives you a chance to showcase your hidden talent and passion. ", "13th Feb"
                 , "10 AM", "100/team", rules, contacts, "https://docs.google.com/forms/d/1toE-wWFwzpsZRdIHI_qy15BznyKX6Xb2JWWXqqU_La4/viewform?c=0&w=1&usp=send_form", false));
-        rules.clear();
-        rules.add("1. There will be two rounds The first one will be video shortlisting and the second will be the final performance on the campus premises.\n" +
+
+        rules = "1. There will be two rounds The first one will be video shortlisting and the second will be the final performance on the campus premises.\n" +
                 "2. There is no restriction on the theme. It's an Open theme Group Dance Competition.\n" +
                 "3. Maximum 1 team per college allowed.\n" +
                 "4. Decision of the judges and the Organising Committee will be final and binding.\n" +
                 "5. No responsibility will be held by DTU for any late or lost entries or any such events.\n" +
-                "6. Team size should not be more than 20. However there must be at least 6 members on stage at any point during the performance.");
+                "6. Team size should not be more than 20. However there must be at least 6 members on stage at any point during the performance.";
 
         danceEvents.add(new Events("Dance", "Spandan (Group)", "BR Ambedkar Auditorium", "Dancing together is different feet moving to the same beats. So move your feet in synergy and leave a lasting impression on the audience. We invite you to a fleeting moment where you feel alive, to enchant the crowd with your vibrant rhythm and to claim the Spandan crown. ",
                 "14th Feb", "12:00 pm", " 300 / team", rules, contacts, "https://docs.google.com/forms/d/1bn0BW9Z1LpaZpHkkFtc6SbeHUtkKoBIbLF35VmZy-go/viewform?c=0&w=1", false));
 
-        rules.clear();
 
-        rules.add("\n" +
+
+        rules = "\n" +
                 "Group\n" +
                 "1. Teams have to perform one of the following dance forms:\n" +
                 "Alkap, Bhangra, Bhavai, Bihu, Cheraw (bamboo dance) , Chhau, Dhap, Dumhal, Gambhira,Garba (dandiya), Gaur dance, Ghoomar, Ghumura, Giddha, Gondhal, Jawara ,Jhoomer, Kalbelia, Karakattam, Koli, Lavani, Naga dance, Odissi, Padhar, Raas.\n" +
@@ -109,7 +109,7 @@ public class Singleton {
                 "Helium balloons\n" +
                 "Special lighting\n" +
                 "\n" +
-                "In case of conflicts, decision of the judges would be considered final and binding\n");
+                "In case of conflicts, decision of the judges would be considered final and binding\n";
         danceEvents.add(new Events("Dance", "Anushthan", "BR Ambedkar Auditorium", "While Indian classical dance is an umbrella term for various codified art forms rooted in sacred Hindu musical theatre styles, the term “Folk dance” describes all forms of folk and tribal dances in regions across India. While Indian classical dance was considered a higher form of art and was practiced in courts, temples and on special occasions, folk dance forms were and are still practiced in groups in rural areas as an expression of the daily work and rituals of the common people during festivals. ",
                 "13th Feb", "11:00 am", "  300/- per team\n" +
                 "    100/- per individual ", rules, contacts, "https://docs.google.com/forms/d/14BSTpjPltUJ6PtsajHY8R6HsdkO_ZVChDyg3RY780wg/viewform?c=0&w=1", false));
@@ -122,8 +122,8 @@ public class Singleton {
 
         List<Events> musicEvents = new ArrayList<>();
 
-        rules.clear();
-        rules.add("Number Of Rounds: 3\n" +
+
+        rules = "Number Of Rounds: 3\n" +
                 "Team Size: 3 - 6 members (All college students). At least one Percussionist and two different instruments\n" +
                 "Elimination:\n" +
                 "1. Bands will be required to send in at least one recorded original compositions and one cover at arpeggiobotb@gmail.com, latest by 9th February 2016. The mail must include name of the band, name and college names of the band members and one contact number.\n" +
@@ -144,7 +144,7 @@ public class Singleton {
                 "3. The participants are required to carry along with them their instruments and gears which include guitars, keyboards, processors, cymbals and stands.\n" +
                 "4. A standard 5-piece drum kit, keyboard stand, cables and Microphones will be provided.\n" +
                 "5. Vocal Processors are not allowed; any band using vocal processors will be disqualified straightaway.\n" +
-                "6. The decision of the judges would be final and irreversible. ");
+                "6. The decision of the judges would be final and irreversible. ";
 
         musicEvents.add(new Events("Music", "Battle Of Bands", "OAT", "“It's all about the game and how you play it\n" +
                 "All about control and if you can take it”\n" +
@@ -153,34 +153,34 @@ public class Singleton {
                 "14 Feb", "2:00 pm", null, rules, contacts, null, false));
 
 
-        rules.clear();
-        rules.add("Online Prelims\n" +
+
+        rules = "Online Prelims\n" +
                 "1. Time limit: 6 minutes, including set up.\n" +
                 "2. One accompaniment allowed. Karaoke track is permitted.\n" +
                 "3. A synthesizer and an acoustic guitar shall be provided. Participants have to bring any other instrument (if required).\n" +
                 "4. Purely classical songs are not allowed.\n" +
                 "Judging Criteria\n" +
-                "Quality of singing, creativity, vocal range, clarity in lyrics and overall impact.");
+                "Quality of singing, creativity, vocal range, clarity in lyrics and overall impact.";
         musicEvents.add(new Events("Music", "Engi Idol", "Convocation Hall", "Let your notes mesmerize everyone and win all hearts. If you've got the sur, the lay and the taal, let them do your talking.\n" +
                 "Registration has to be done ONLINE ONLY. There will be NO on the spot registration. ",
                 "13 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/13A53aS8Zl8Ap0n8tn65dokbdKwiPEuEXNf3QkjMgZYs/viewform?c=0&w=1&usp=send_form", false));
 
 
-        rules.clear();
-        rules.add("1. Time limit: 10 minutes, including set up.\n" +
+
+        rules = "1. Time limit: 10 minutes, including set up.\n" +
                 "2. Group can comprise of 5-15 members (including the accompanists).\n" +
                 "3. A maximum of 2 accompaniments are allowed.\n" +
                 "4. A synthesizer shall be provided. Participants have to bring any other instrument(s) if required.\n" +
                 "5. Beat-boxing is allowed.\n" +
                 "Judging Criteria\n" +
-                "Vocal dynamics, originality, creativity, coordination and overall impact. ");
-        musicEvents.add(new Events("Music", "Vrind", "Convocation Hall","Come, sing and conquer our hearts, because if it is music you're all about and melody's your weapon,then we're all up for it.\n" +
+                "Vocal dynamics, originality, creativity, coordination and overall impact. ";
+        musicEvents.add(new Events("Music", "Vrind", "Convocation Hall", "Come, sing and conquer our hearts, because if it is music you're all about and melody's your weapon,then we're all up for it.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from a group should register. ",
                 " 13 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/14aTV6lFailmgKX-byD2tM9FcOF8VWVTGIdihWZwkHaY/viewform?c=0&w=1&usp=send_form", false));
 
 
-        rules.clear();
-        rules.add("Online Prelims\n" +
+
+        rules = "Online Prelims\n" +
                 "Send your recording (audio/video) or the link to your YouTube video to madhurima.western@gmail.com .\n" +
                 "Rules\n" +
                 "1. Time limit: 6 minutes, including set up.\n" +
@@ -188,14 +188,14 @@ public class Singleton {
                 "3. A synthesizer and an acoustic guitar shall be provided. Participants have to bring any other instrument (if required).\n" +
                 "4. Rap not allowed.\n" +
                 "Judging Criteria\n" +
-                "Quality of singing, creativity, vocal range, clarity in lyrics and overall impact.");
+                "Quality of singing, creativity, vocal range, clarity in lyrics and overall impact.";
         musicEvents.add(new Events("Music", "Vocalicious", "Convocation Hall", "Does your hand itch to reach out for the mike? Is the stage your second home and the audience your second family? Then come, be a part of Vocalicious. The stage awaits you.\n" +
                 "Registration has to be done ONLINE ONLY. There will be NO on the spot registration. ",
                 "15 Feb", "10:00 am", null, rules, contacts, null, false));
 
 
-        rules.clear();
-        rules.add("");
+
+        rules = "";
         musicEvents.add(new Events("Music", "Battle Of Bands", "OAT", "“It's all about the game and how you play it\n" +
                 "All about control and if you can take it”\n" +
                 "If these lines instantly remind you of a deep, husky low-pitched growl, you have arrived at the right spot.\n" +
@@ -203,56 +203,56 @@ public class Singleton {
                 "14 Feb", "2:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1qabYx-der4tDNvUiYgn1B3eIeZTHFUSLPIGppHbDZlI/viewform?c=0&w=1", false));
 
 
-        rules.clear();
-        rules.add("1. Time limit: 10 minutes, including set up.\n" +
+
+        rules = "1. Time limit: 10 minutes, including set up.\n" +
                 "2. Group can comprise of 5-15 members.\n" +
                 "3. Group can comprise of 5-15 members (including the accompanists).\n" +
                 "4. A maximum of 2 accompaniments are allowed.\n" +
                 "5. An acoustic guitar and a synthesizer shall be provided. Participants have to bring any other instrument(s) if required.\n" +
                 "6. Beat-boxing is allowed.\n" +
                 "Judging Criteria\n" +
-                "Vocal dynamics, originality, creativity, coordination and overall impact.");
+                "Vocal dynamics, originality, creativity, coordination and overall impact.";
         musicEvents.add(new Events("Music", "Balladeers", "Convocation Hall",  "You're a note when you're alone, but a whole symphony when a group. Come, bring your harmonies to the stage and enthrall everyone with your compositions.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from a group should register.",
                 "15 Feb", "10:00 am", null, rules, contacts,"https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1" ,false));
 
-        rules.clear();
-        rules.add("1. Time limit: 8 minutes, including set up.\n" +
+
+        rules = "1. Time limit: 8 minutes, including set up.\n" +
                 "2. There should be exactly three members in a team.\n" +
                 "3. The three members have the freedom to sing and/or play any number of instruments.\n" +
                 "4. A synthesizer, an acoustic guitar and a drum kit shall be provided. Participants have to bring any other instrument(s) if required.\n" +
                 "5. Digital effects processors are allowed, however, use of loopers and digital rhythm patterns are strictly prohibited.\n" +
                 "6. Beat boxing is allowed.\n" +
                 "Judging Criteria\n" +
-                "Originality, creativity, coordination and overall impact.");
+                "Originality, creativity, coordination and overall impact.";
         musicEvents.add(new Events("Music", "Three's A Show", "OAT", "They say the best things in life come in threes. If you three think you're one of those things, you have the stage. Show us your magic.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from the team should register. ",
-                "14 Feb", "10:00 am", null, rules, contacts,"https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1" ,false));
+                "14 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1", false));
 
         SugarRecord.saveInTx(musicEvents);
 
         List<Events> dramaEvents = new ArrayList<>();
 
-        rules.clear();
-        rules.add("1. The team size represents the number of people registered as a team. Only these shall be allowed to perform the street play.\n" +
+
+        rules = "1. The team size represents the number of people registered as a team. Only these shall be allowed to perform the street play.\n" +
                 "2. Minimum of 8 actors are to be included in the team.\n" +
                 "3. The time limit is 21 minute (empty stage to empty stage).\n" +
                 "4. Music accompanists are included in the team number stated above.\n" +
                 "5. Teams are expected to perform at an open air venue, on a circular stage with audience all around.\n" +
                 "6. No electrical appliances shall be allowed during the performance, whether inside or outside the circle of performance.\n" +
-                "7. Only live music is allowed. Teams will have to bring their own instruments - no instrument shall be provided.");
+                "7. Only live music is allowed. Teams will have to bring their own instruments - no instrument shall be provided.";
 
         dramaEvents.add(new Events("Drama", "Nukkad", "Mech C Parking", "With any part you play there is a certain amount of yourself in it. There has tobe,otherwise it’s not acting.It’s lying.”The deep message wrapped in emotions, humor and energy is what nukkad is known for.The artists shall roar till their message spreads farand wide. ",
                 "13th Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1IyIiw3fiNSSAOkN4RqRG9r7RntglpPSZNGL_BNcoa34/viewform?c=0&w=1", false));
 
-        rules.clear();
-        rules.add("1. Performance should be in Hindi or English or both. However short sub - passages in other languages are allowed .\n" +
+
+        rules = "1. Performance should be in Hindi or English or both. However short sub - passages in other languages are allowed .\n" +
                 "2. The total time of performance sound be between 35 to 50 minutes.\n" +
                 "Top 10 entries will be selected for the semi-finals.\n" +
                 "3. 4 chairs and 2 tables will be provided by our side.Any other production material has to be brought by the teams themselves but the organizers hold the discretion of allowing its inclusion on stage.\n" +
                 "4. Stage Play comprises of multiple scenes and may have blackouts.\n" +
                 "5. Backstage voiceovers and narrations are allowed during the performance.\n" +
-                "6. Pre-recorded music is allowed and should be brought in a CD/DVD or a pen drive in .cda or .mp3 format only. (Other FORMATs may not be supported on the computer – use them at your own risk).");
+                "6. Pre-recorded music is allowed and should be brought in a CD/DVD or a pen drive in .cda or .mp3 format only. (Other FORMATs may not be supported on the computer – use them at your own risk).";
         dramaEvents.add(new Events("Drama", "Natya", "BR Ambedkar Auditorium", null,
                 "15th Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1u9UKgopLJuaWRgbSPhCp9LU_672BO_1Dhi1kxK9cRmo/viewform?c=0&w=1", false));
 
@@ -261,8 +261,8 @@ public class Singleton {
 
         List<Events> fashionEvents = new ArrayList<>();
 
-        rules.clear();
-        rules.add("1. Only one entry per college is allowed.\n" +
+
+        rules = "1. Only one entry per college is allowed.\n" +
                 "2. It’s a team event, a team can have 12-15 members(including participants, choreographer, co-ordinator).\n" +
                 "3. The event has two rounds - Western and Theme.\n" +
                 "4. Time limit for each round will be 10 minutes including set up and performance.\n" +
@@ -272,7 +272,7 @@ public class Singleton {
                 "8. Teams shall carry their tracks with them.\n" +
                 "9. Teams will be judged based on costumes, theme, walking stance and attitude.\n" +
                 "10. Decision of the judges will be final and no discussion shall be held over it.\n" +
-                "11. Creating nuisance ,consumption of alcohol smoking etc will lead to the debarment of the team. ");
+                "11. Creating nuisance ,consumption of alcohol smoking etc will lead to the debarment of the team. ";
 
         fashionEvents.add(new Events("Fashion", "Paridhan", "Sports Complex", "If you think you have it in you to set fire to the stage with thousands of eyes on each perfectly choreographed step you take on the ramp, this is where you belong ",
                 "14th Feb", " 3:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1APUs55t67Me-nrSeuxViJEwPj9aoPQkRC--pFRI_11g/viewform?c=0&w=1", false));
@@ -300,6 +300,27 @@ public class Singleton {
 
 
         SugarRecord.saveInTx(proNightEvents);
+
+        List<Events> miscEvents = new ArrayList<>();
+
+        miscEvents.add(new Events("Miscellaneous", "Shakedown", "Hostel Road",  "The whirr of tyres speeding down the tracks; the feel of vintage bikes driving by you… Yes! SHAKEDOWN, the most anticipated event of Engifest’16 is here!\n" +
+                "Presented by Souls of Speed, Shakedown is one-of-a-kind roadshow- a spectacle which would leave you enticed. Jaws will drop and eyes will widen, as daredevil stunts are pulled off with ease and style! ",
+                "14 Feb", "12:00 pm", null, null, null, null, false));
+
+        rules = "Team size: At most 15 (including the actors)\n" +
+                "Time Limit: 5 to 15 minutes\n" +
+                "Theme: Coincidence (Theme is open to interpretation)\n" +
+                "Judging Criteria: Editing, Cinematography, Script, Acting, Sound design and Overall impact.\n" +
+                "1. The movies should be either in Hindi or English or both.\n" +
+                "2. If you choose to make a film in Hindi, it must contain English subtitles.\n" +
+                "3. No other languages will be allowed.\n" +
+                "4. Please note that we will not be responsible for postal delays, losses or damages–make sure you send in entries sufficiently before the deadline.\n" +
+                "5. You may use any video camera you deem suitable for shooting the movie.";
+        miscEvents.add(new Events("Miscellaneous", "Kaleidoscope", "Edusat Hall",  "Short film making competition, where the theme will be provided a month before engifest. Handpicked Entries will be screened at the venue with the presence of the judges. ",
+                "14th Feb", "10:00 am", null, rules, contacts, "https://goo.gl/forms/fZuODXpy9B", false));
+
+        miscEvents.add(new Events("Miscellaneous", "Mr and Miss Engifest", true));
+        SugarRecord.saveInTx(miscEvents);
 
 
 

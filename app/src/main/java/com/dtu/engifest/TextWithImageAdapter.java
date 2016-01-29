@@ -52,10 +52,11 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
         holder.name.setText(list.get(position).getName());
         if(!isSponsors) {
             Picasso.with(context).load(list.get(position).getImageResource()).into(holder.imageView);
-            myView.setOnClickListener(new View.OnClickListener() {
+
+            holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    List<Events> eventses = Events.find(Events.class, "category = ?", sponsors.getName());
+                    List<Events> eventses = Events.find(Events.class, "category = ?", list.get(position).getName());
                     Log.e("sa", eventses.get(0).getName());
                     String[] items = new String[eventses.size()];
                     for (int i = 0; i < eventses.size(); i++) {
