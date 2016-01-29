@@ -17,7 +17,7 @@ public class Events extends SugarRecord {
     String time;
     String fees;
     String rules;
-    ArrayList<Contact> contacts;
+    String contacts;
     String registerLink;
     boolean specialRequirements;
 
@@ -43,7 +43,7 @@ public class Events extends SugarRecord {
     public Events() {
     }
 
-    public Events(String category, String name, String venue, String information, String date, String time, String fees, String rules, ArrayList<Contact> contacts, String registerLink, boolean specialRequirements) {
+    public Events(String category, String name, String venue, String information, String date, String time, String fees, String rules, String contacts, String registerLink, boolean specialRequirements) {
         this.category = category;
         Sponsors sponsorsa = new Sponsors(category);
         this.sponsor = sponsorsa;
@@ -161,11 +161,11 @@ public class Events extends SugarRecord {
         this.rules = rules;
     }
 
-    public ArrayList<Contact> getContacts() {
+    public String getContacts() {
         return contacts;
     }
 
-    public void setContacts(ArrayList<Contact> contacts) {
+    public void setContacts(String contacts) {
         this.contacts = contacts;
     }
 
