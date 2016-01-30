@@ -1,6 +1,8 @@
 package com.dtu.engifest;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,11 +34,17 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.MyVi
     }
 
     @Override
-    public void onBindViewHolder(EventListAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(EventListAdapter.MyViewHolder holder, final int position) {
 
         holder.name.setText(list.get(position).getName());
         holder.date.setText(list.get(position).getTime());
         holder.time.setText(list.get(position).getVenue());
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, EventDetail.class).putExtra("name", list.get(position).getName()));
+            }
+        });
     }
 
     @Override
@@ -48,10 +56,12 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.MyVi
 
         TextView name;
         TextView date;
+        CardView card;
         TextView time;
         public MyViewHolder(View itemView) {
             super(itemView);
             name = (TextView)itemView.findViewById(R.id.name);
+            card = (CardView)itemView.findViewById(R.id.card_view);
             date = (TextView)itemView.findViewById(R.id.date);
             time = (TextView)itemView.findViewById(R.id.time);
         }
