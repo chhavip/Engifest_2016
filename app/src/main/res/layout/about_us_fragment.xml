@@ -1,36 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:htext="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:background="@color/layout_4_colour"
-    android:orientation="vertical">
 
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
 
-    <com.hanks.htextview.HTextView
-        android:layout_marginTop="50dp"
-        android:id="@+id/headingText"
+    android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:clickable="true"
-        android:gravity="center"
-        android:onClick="onClick"
-        htext:animateType="scale"
-        android:background="@android:color/transparent"
-        android:textColor="#fff"
-        android:textSize="24sp"
-        android:contextClickable="false"/>
-    <com.hanks.htextview.HTextView
-        android:id="@+id/contentText"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:clickable="true"
-        android:gravity="center"
-        android:onClick="onClick"
-        htext:animateType="scale"
-        android:background="@android:color/transparent"
-        android:textColor="#fff"
-        android:textSize="24sp"
-        android:contextClickable="false"/>
+        android:layout_height="match_parent"
+        xmlns:htext="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
 
-</LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/dtu"
+            android:id="@+id/dtu"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anout_dtu"
+            android:id="@+id/textView"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+
+            android:layout_gravity="center_horizontal" />
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            />
+    </LinearLayout>
+</ScrollView>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+       <in.championswimmer.libsocialbuttons.fabs.FABFacebook
+           android:layout_width="50dp"
+           android:layout_marginRight="20dp"
+           android:layout_weight="1"
+           android:layout_height="60dp" />
+        <in.championswimmer.libsocialbuttons.fabs.FABInstagram
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:layout_height="60dp" />
+        <in.championswimmer.libsocialbuttons.fabs.FABYoutube
+            android:layout_width="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_height="60dp" />
+
+    </LinearLayout>
+</RelativeLayout>

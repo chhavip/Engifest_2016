@@ -25,7 +25,7 @@ public class MenuActivity extends AppCompatActivity {
     CoolMenuFrameLayout coolMenuFrameLayout;
 
     List<Fragment> fragments = new ArrayList<>();
-
+    FloatingActionButton fab;
     List<String> titleList = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,22 +44,7 @@ public class MenuActivity extends AppCompatActivity {
         fragments.add(new EventsFragment());
         fragments.add(new HomeFragment());
 
-        FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
-            @Override
-            public Fragment getItem(int position) {
-                return fragments.get(position);
-
-            }
-
-            @Override
-            public int getCount() {
-                return fragments.size();
-            }
-        };
-        coolMenuFrameLayout.setAdapter(adapter);
-
-
-        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+        fab = (FloatingActionButton)findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,6 +60,27 @@ public class MenuActivity extends AppCompatActivity {
                 }
             }
         });
+        FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+
+                if(position == 1)
+                    fab.setVisibility(View.GONE);
+                else
+                    fab.setVisibility(View.VISIBLE);
+                return fragments.get(position);
+
+            }
+
+            @Override
+            public int getCount() {
+                return fragments.size();
+            }
+        };
+        coolMenuFrameLayout.setAdapter(adapter);
+
+
+
 
     }
     public boolean isGoogleMapsInstalled()

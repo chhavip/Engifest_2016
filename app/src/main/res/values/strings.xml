@@ -83,5 +83,9 @@
     <string name="title_activity_login">Register</string>
     <string name="title_activity_main22">Main22Activity</string>
     <string name="title_activity_event_detail">EventDetail</string>
+    <string name="dtu"><b>DTU :</b> The Legacy</string>
+    <string name="anout_dtu_next">  Therefore, it gives us immense pleasure to express that Delhi Technological University has completed 75 glorious years of sheer excellence, and contributed to colossal human resource development and innovation in this period. </string>
+
+    <string name="anout_dtu"> Delhi Technological University (formerly Delhi College of Engineering and Delhi Polytechnic) has been a premier engineering institute in the country since it came into existence in 1941, and has always striven to mould students into skilled technical experts. </string>
     <string name="engifest_about"><b>ENGIFEST</b> is a four day extravaganza, a celebration of sorts, a dense, fun-filled embodiment of the energy and conviviality which characterizes college life, a festival oozing with fun, vibrancy and entertainment.</string>
 </resources>
