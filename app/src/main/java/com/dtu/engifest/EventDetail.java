@@ -106,6 +106,7 @@ public class EventDetail extends AppCompatActivity {
                     @Override
                     public void onPrepareLoad(Drawable placeHolderDrawable) {
                         image.setImageResource(R.drawable.joker_port);
+                        coordinatorLayout.setBackgroundColor(getVibrantColor(image));
 
                     }
                 });
@@ -185,6 +186,20 @@ public class EventDetail extends AppCompatActivity {
 
        /* BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
         Bitmap bitmap = drawable.getBitmap();*/
+
+        Palette p = Palette.generate(bitmap);
+
+        int color = p.getLightVibrantColor(EventDetail.this.getResources().getColor(R.color.colorPrimaryDark));
+        setButtonBackground(p.getLightMutedColor(getResources().getColor(R.color.button_colour)));
+
+
+        return color;
+    }
+
+    public int getVibrantColor(ImageView imageView) {
+
+        BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();
 
         Palette p = Palette.generate(bitmap);
 
