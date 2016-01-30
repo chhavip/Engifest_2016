@@ -221,7 +221,7 @@ public class Singleton {
 
 
 
-        rules = "";
+       /* rules = "";
         contacts = "Nikil James Paul +91-9643617174\n" +
                 "Suhail Subair +91-7042673847\n" +
                 "Yash Chauhan +91-9555650014";
@@ -232,7 +232,7 @@ public class Singleton {
                 "Engifest ’16, the annual cultural festival of Delhi Technological University invites you to an ear-shattering Arpeggio – Battle of the Bands. Let the cymbals clank, the guitars strum and the screams rattle Delhi-42! ",
                 "14 Feb", "2:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1qabYx-der4tDNvUiYgn1B3eIeZTHFUSLPIGppHbDZlI/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/battle-of-bands/battle%20of%20bands.jpg"));
 
-
+*/
 
         rules = "1. Time limit: 10 minutes, including set up.\n" +
                 "2. Group can comprise of 5-15 members.\n" +
