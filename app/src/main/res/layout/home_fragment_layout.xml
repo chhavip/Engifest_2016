@@ -17,15 +17,18 @@
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
     android:textColor="@color/c_white"
     android:text="@string/engifest_about"
     android:layout_marginLeft="10dp"
+    android:textSize="15sp"
     android:layout_marginRight="10dp"/>
     </me.grantland.widget.AutofitLayout>
     <com.daimajia.slider.library.SliderLayout
         android:id="@+id/slider"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="220dp"
         />
 
 
@@ -50,8 +53,7 @@
                 android:textStyle="italic"
                 android:background="@drawable/explorebg5"
                 android:layout_weight="8"
-                android:textColor="@color/c_reddevil"
-                android:text=""/>
+                android:textColor="@color/c_reddevil" />
 
             <ImageView
                 android:layout_width="wrap_content"
