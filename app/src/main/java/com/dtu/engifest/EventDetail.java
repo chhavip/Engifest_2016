@@ -35,6 +35,7 @@ public class EventDetail extends AppCompatActivity {
     private TextView venue;
     private TextView time;
     private TextView description;
+    private TextView fees;
     private ImageView image;
     private Button contacts;
     private LinearLayout linearLayout;
@@ -55,6 +56,7 @@ public class EventDetail extends AppCompatActivity {
         title = (TextView)findViewById(R.id.movie_title);
         date = (TextView)findViewById(R.id.release_date_text);
         time = (TextView)findViewById(R.id.release_date);
+        fees = (TextView)findViewById(R.id.fees_text);
         description = (TextView)findViewById(R.id.movie_synopsis);
         venue = (TextView)findViewById(R.id.time);
         image = (ImageView)findViewById(R.id.movie_poster);
@@ -149,7 +151,27 @@ public class EventDetail extends AppCompatActivity {
         }else{
             register.setVisibility(View.GONE);
         }
+        if(event.getContacts()!=null){
+            contacts.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new MaterialDialog.Builder(EventDetail.this)
+                            .title("Contact")
+                            .content(event.getContacts())
+                            .positiveText("OK")
+                            .show();
 
+                }
+            });
+        }else{
+            contacts.setVisibility(View.GONE);
+        }
+
+        if(event.getFees()!=null){
+            fees.setText(event.getFees());
+        }else{
+            fees.setVisibility(View.GONE);
+        }
 
 
 

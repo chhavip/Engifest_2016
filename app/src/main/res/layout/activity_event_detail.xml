@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/cordinator_layout"
-    android:background="@color/c_red_ncs"
+    android:background="#e77d25"
     tools:context="com.dtu.engifest.EventDetail">
 
 
