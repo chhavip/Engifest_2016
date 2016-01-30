@@ -36,6 +36,7 @@ public class EventDetail extends AppCompatActivity {
     private TextView time;
     private TextView description;
     private TextView fees;
+    private TextView fees_text;
     private ImageView image;
     private Button contacts;
     private LinearLayout linearLayout;
@@ -57,6 +58,7 @@ public class EventDetail extends AppCompatActivity {
         date = (TextView)findViewById(R.id.release_date_text);
         time = (TextView)findViewById(R.id.release_date);
         fees = (TextView)findViewById(R.id.fees_text);
+        fees_text = (TextView)findViewById(R.id.fees);
         description = (TextView)findViewById(R.id.movie_synopsis);
         venue = (TextView)findViewById(R.id.time);
         image = (ImageView)findViewById(R.id.movie_poster);
@@ -171,6 +173,7 @@ public class EventDetail extends AppCompatActivity {
             fees.setText(event.getFees());
         }else{
             fees.setVisibility(View.GONE);
+            fees_text.setVisibility(View.GONE);
         }
 
 
