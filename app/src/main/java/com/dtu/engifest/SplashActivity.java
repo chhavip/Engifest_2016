@@ -16,6 +16,9 @@ import android.widget.ViewSwitcher;
 import com.hanks.htextview.HTextView;
 import com.hanks.htextview.HTextViewType;
 import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseInstallation;
+import com.parse.PushService;
 
 /**
  * Created by chhavi on 22/1/16.
@@ -27,8 +30,10 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        Parse.enableLocalDatastore(getApplicationContext());
-        Parse.initialize(getApplicationContext());
+        // To track statistics around application
+        ParseAnalytics.trackAppOpened(getIntent());
+
+
         final String[] sentences = new String[]{"THE WAIT", "IS OVER", "OVER"};
         setContentView(R.layout.splash_activity);
         hTextView = (HTextView) findViewById(R.id.text2);

@@ -70,22 +70,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-
+/*
         String nameUser = "me";
-        String emailUser = "shikhark211@gmail.com";
+        String emailUser = "shikhark211@gmail.com";*/
+        String nameUser = name.getText().toString();
+        String emailUser = testEmail.getText().toString();
         Toast.makeText(mActivity, "onClick", Toast.LENGTH_SHORT).show();
-        ParseUser user = new ParseUser();
+        final ParseUser user = new ParseUser();
         user.setUsername(nameUser);
         user.setPassword("testPassword");
         user.setEmail(emailUser);
-        Intent intent = new Intent(mActivity, MenuActivity.class);
-        startActivity(intent);
+
         user.signUpInBackground(new SignUpCallback() {
             public void done(ParseException e) {
                 if (e == null) {
 
+                  //  EngifestApplication.updateParseInstallation(user);
                     finish();
                     // Hooray! Let them use the app now.
+
+                    Intent intent = new Intent(mActivity, MenuActivity.class);
+                    startActivity(intent);
                 } else {
 
                     Log.d("error", e.toString());
