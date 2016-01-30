@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,7 @@ import com.dtu.engifest.models.Events;
 import com.dtu.engifest.models.Sponsors;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 
 /**
@@ -24,14 +25,16 @@ import java.util.ArrayList;
  */
 public class ScheduleFragment extends Fragment implements View.OnClickListener {
 
-    RecyclerView eventRecycler;
-    ArrayList<Events> eventList;
-    FrameLayout scheduleButton13;
-    FrameLayout scheduleButton14;
-    FrameLayout scheduleButton15;
-    TextView t13;
-    TextView t14;
-    TextView t15;
+   private RecyclerView eventRecycler;
+    private  ArrayList<Events> eventList;
+    private  FrameLayout scheduleButton13;
+    private FrameLayout scheduleButton14;
+    private FrameLayout scheduleButton15;
+    EventListAdapter myAdapter;
+    private TextView t13;
+    private TextView t14;
+    private TextView t15;
+    private  int day;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,18 +56,49 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
         t14 = (TextView) view.findViewById(R.id.t14);
         t15 = (TextView) view.findViewById(R.id.t15);
         eventList = new ArrayList<>();
+        t13.setTextColor(getResources().getColor(R.color.c_white));
+        t14.setTextColor(getResources().getColor(R.color.colorAccent));
+        t15.setTextColor(getResources().getColor(R.color.colorAccent));
+        day = 1;
         addEventsAccordingToSchedule();
 
         eventRecycler = (RecyclerView) view.findViewById(R.id.event_category_recycler_view);
-        EventListAdapter myAdapter = new EventListAdapter(getActivity(), eventList);
+         myAdapter = new EventListAdapter(getActivity(), eventList);
         eventRecycler.setAdapter(myAdapter);
         eventRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
+        scheduleButton13.requestFocus();
 
         return view;
     }
 
     private void addEventsAccordingToSchedule() {
 //        eventList.add(new Events("Dance", "spandan", false));
+        eventList.clear();
+        List<Events> events;
+        switch (day){
+            case 1:
+              events = Events.find(Events.class, "date = ?", "13th February");
+                for(int i=0;i<events.size();i++){
+                    eventList.add(events.get(i));
+                }
+                break;
+            case 2:
+              events = Events.find(Events.class, "date = ?", "14th February");
+                for(int i=0;i<events.size();i++){
+                    eventList.add(events.get(i));
+                }
+                break;
+            case 3:
+                 events = Events.find(Events.class, "date = ?", "15th February");
+                for(int i=0;i<events.size();i++){
+                    eventList.add(events.get(i));
+                }
+                break;
+
+        }
+        myAdapter.notifyDataSetChanged();
+       // Log.e("asd", events.get(0).getDate());
+
     }
 
     @Override
@@ -85,6 +119,8 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 t13.setTextColor(getResources().getColor(R.color.c_white));
                 t14.setTextColor(getResources().getColor(R.color.colorAccent));
                 t15.setTextColor(getResources().getColor(R.color.colorAccent));
+                day = 1;
+                addEventsAccordingToSchedule();
 
                 break;
             case R.id.feb_14:
@@ -92,12 +128,16 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 t14.setTextColor(getResources().getColor(R.color.c_white));
                 t13.setTextColor(getResources().getColor(R.color.colorAccent));
                 t15.setTextColor(getResources().getColor(R.color.colorAccent));
+                day = 2;
+                addEventsAccordingToSchedule();
                 break;
             case R.id.feb_15:
                 scheduleButton15.requestFocus();
                 t15.setTextColor(getResources().getColor(R.color.c_white));
                 t14.setTextColor(getResources().getColor(R.color.colorAccent));
                 t13.setTextColor(getResources().getColor(R.color.colorAccent));
+                day = 3;
+                addEventsAccordingToSchedule();
                 break;
         }
     }

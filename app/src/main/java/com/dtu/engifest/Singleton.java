@@ -58,7 +58,7 @@ public class Singleton {
                 "Saurabh Suman +91-9582317061 \n" +
                 "Achal Yadav +91-8376054139 \n" +
                 "Pooja Gupta +91-7838724227";
-        danceEvents.add(new Events("Dance", "Spandan (Solo)", "OAT", "Dance is the language of the soul and ENGIFEST'16 gives every soul a beautiful platform to express, a competitive environment for every dancer to showcase their talent.Calling out to all dance enthusiasts to dance their hearts out. Whatever your style be - jazz, hip hop, contemporary, classical or freestyle, SPANDAN gives you a chance to showcase your hidden talent and passion. ", "13th Feb"
+        danceEvents.add(new Events("Dance", "Spandan (Solo)", "OAT", "Dance is the language of the soul and ENGIFEST'16 gives every soul a beautiful platform to express, a competitive environment for every dancer to showcase their talent.Calling out to all dance enthusiasts to dance their hearts out. Whatever your style be - jazz, hip hop, contemporary, classical or freestyle, SPANDAN gives you a chance to showcase your hidden talent and passion. ", "13th February"
                 , "10 AM", "100/team", rules, contacts, "https://docs.google.com/forms/d/1toE-wWFwzpsZRdIHI_qy15BznyKX6Xb2JWWXqqU_La4/viewform?c=0&w=1&usp=send_form", false, "http://engifest.dtu.ac.in/events/spandan-solo/spandan%28solo%29.jpg"));
 
         rules = "1. There will be two rounds The first one will be video shortlisting and the second will be the final performance on the campus premises.\n" +
@@ -73,7 +73,7 @@ public class Singleton {
                 "Achal Yadav +91-8376054139 \n" +
                 "Pooja Gupta +91-7838724227";
         danceEvents.add(new Events("Dance", "Spandan (Group)", "BR Ambedkar Auditorium", "Dancing together is different feet moving to the same beats. So move your feet in synergy and leave a lasting impression on the audience. We invite you to a fleeting moment where you feel alive, to enchant the crowd with your vibrant rhythm and to claim the Spandan crown. ",
-                "14th Feb", "12:00 pm", " 300 / team", rules, contacts, "https://docs.google.com/forms/d/1bn0BW9Z1LpaZpHkkFtc6SbeHUtkKoBIbLF35VmZy-go/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/spandan-group/spandan(group).jpg"));
+                "14th February", "12:00 pm", " 300 / team", rules, contacts, "https://docs.google.com/forms/d/1bn0BW9Z1LpaZpHkkFtc6SbeHUtkKoBIbLF35VmZy-go/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/spandan-group/spandan(group).jpg"));
 
 
 
@@ -124,7 +124,7 @@ public class Singleton {
                 "Achal Yadav +91-8376054139 \n" +
                 "Pooja Gupta +91-7838724227";
         danceEvents.add(new Events("Dance", "Anushthan", "BR Ambedkar Auditorium", "While Indian classical dance is an umbrella term for various codified art forms rooted in sacred Hindu musical theatre styles, the term “Folk dance” describes all forms of folk and tribal dances in regions across India. While Indian classical dance was considered a higher form of art and was practiced in courts, temples and on special occasions, folk dance forms were and are still practiced in groups in rural areas as an expression of the daily work and rituals of the common people during festivals. ",
-                "13th Feb", "11:00 am", "  300/- per team\n" +
+                "13th February", "11:00 am", "  300/- per team\n" +
                 "    100/- per individual ", rules, contacts, "https://docs.google.com/forms/d/14BSTpjPltUJ6PtsajHY8R6HsdkO_ZVChDyg3RY780wg/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/anushthan/11058440_871279442935379_7185984909711420466_o.jpg"));
 
         danceEvents.add(new Events("Dance", "STFU", true));
@@ -165,7 +165,7 @@ public class Singleton {
                 "All about control and if you can take it”\n" +
                 "If these lines instantly remind you of a deep, husky low-pitched growl, you have arrived at the right spot.\n" +
                 "Engifest ’16, the annual cultural festival of Delhi Technological University invites you to an ear-shattering Arpeggio – Battle of the Bands. Let the cymbals clank, the guitars strum and the screams rattle Delhi-42! ",
-                "14 Feb", "2:00 pm", null, rules, contacts, null, false, "http://engifest.dtu.ac.in/events/battle-of-bands/battle%20of%20bands.jpg"));
+                "14th February", "2:00 pm", null, rules, contacts, null, false, "http://engifest.dtu.ac.in/events/battle-of-bands/battle%20of%20bands.jpg"));
 
 
 
@@ -181,7 +181,7 @@ public class Singleton {
                 "Yash Chauhan +91-9555650014";
         musicEvents.add(new Events("Music", "Engi Idol", "Convocation Hall", "Let your notes mesmerize everyone and win all hearts. If you've got the sur, the lay and the taal, let them do your talking.\n" +
                 "Registration has to be done ONLINE ONLY. There will be NO on the spot registration. ",
-                "13 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/13A53aS8Zl8Ap0n8tn65dokbdKwiPEuEXNf3QkjMgZYs/viewform?c=0&w=1&usp=send_form", false, "http://engifest.dtu.ac.in/events/engi-idol/1599855_667435116653147_1953477379_o.jpg"));
+                "13th February", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/13A53aS8Zl8Ap0n8tn65dokbdKwiPEuEXNf3QkjMgZYs/viewform?c=0&w=1&usp=send_form", false, "http://engifest.dtu.ac.in/events/engi-idol/1599855_667435116653147_1953477379_o.jpg"));
 
 
 
@@ -198,7 +198,7 @@ public class Singleton {
 
         musicEvents.add(new Events("Music", "Vrind", "Convocation Hall", "Come, sing and conquer our hearts, because if it is music you're all about and melody's your weapon,then we're all up for it.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from a group should register. ",
-                " 13 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/14aTV6lFailmgKX-byD2tM9FcOF8VWVTGIdihWZwkHaY/viewform?c=0&w=1&usp=send_form", false, "http://engifest.dtu.ac.in/events/vrind/vrind.jpg"));
+                "13th February", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/14aTV6lFailmgKX-byD2tM9FcOF8VWVTGIdihWZwkHaY/viewform?c=0&w=1&usp=send_form", false, "http://engifest.dtu.ac.in/events/vrind/vrind.jpg"));
 
 
 
@@ -217,7 +217,7 @@ public class Singleton {
 
         musicEvents.add(new Events("Music", "Vocalicious", "Convocation Hall", "Does your hand itch to reach out for the mike? Is the stage your second home and the audience your second family? Then come, be a part of Vocalicious. The stage awaits you.\n" +
                 "Registration has to be done ONLINE ONLY. There will be NO on the spot registration. ",
-                "15 Feb", "10:00 am", null, rules, contacts, null, false, "http://engifest.dtu.ac.in/events/vocalicious/1966027_687808047949187_4492048074217824304_o.jpg"));
+                "15th February", "10:00 am", null, rules, contacts, null, false, "http://engifest.dtu.ac.in/events/vocalicious/1966027_687808047949187_4492048074217824304_o.jpg"));
 
 
 
@@ -230,7 +230,7 @@ public class Singleton {
                 "All about control and if you can take it”\n" +
                 "If these lines instantly remind you of a deep, husky low-pitched growl, you have arrived at the right spot.\n" +
                 "Engifest ’16, the annual cultural festival of Delhi Technological University invites you to an ear-shattering Arpeggio – Battle of the Bands. Let the cymbals clank, the guitars strum and the screams rattle Delhi-42! ",
-                "14 Feb", "2:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1qabYx-der4tDNvUiYgn1B3eIeZTHFUSLPIGppHbDZlI/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/battle-of-bands/battle%20of%20bands.jpg"));
+                "14th February", "2:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1qabYx-der4tDNvUiYgn1B3eIeZTHFUSLPIGppHbDZlI/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/battle-of-bands/battle%20of%20bands.jpg"));
 
 */
 
@@ -248,7 +248,7 @@ public class Singleton {
 
         musicEvents.add(new Events("Music", "Balladeers", "Convocation Hall",  "You're a note when you're alone, but a whole symphony when a group. Come, bring your harmonies to the stage and enthrall everyone with your compositions.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from a group should register.",
-                "15 Feb", "10:00 am", null, rules, contacts,"https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1" ,false, "http://engifest.dtu.ac.in/events/balladeers/balladeers.jpg"));
+                "15th February", "10:00 am", null, rules, contacts,"https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1" ,false, "http://engifest.dtu.ac.in/events/balladeers/balladeers.jpg"));
 
 
         rules = "1. Time limit: 8 minutes, including set up.\n" +
@@ -264,7 +264,7 @@ public class Singleton {
 
         musicEvents.add(new Events("Music", "Three's A Show", "OAT", "They say the best things in life come in threes. If you three think you're one of those things, you have the stage. Show us your magic.\n" +
                 "Participants can register both online and offline (on the spot). Only one person from the team should register. ",
-                "14 Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/three's-a-show/three.jpg"));
+                "14th February", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1f6YOZZdKlPjpeWynY7hQuwLab9RuRX32w5G5kTPMoAc/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/three's-a-show/three.jpg"));
 
         SugarRecord.saveInTx(musicEvents);
 
@@ -282,7 +282,7 @@ public class Singleton {
                 "Vaibhav Chauhan +91-9968733717 ";
 
         dramaEvents.add(new Events("Drama", "Nukkad", "Mech C Parking", "With any part you play there is a certain amount of yourself in it. There has tobe,otherwise it’s not acting.It’s lying.”The deep message wrapped in emotions, humor and energy is what nukkad is known for.The artists shall roar till their message spreads farand wide. ",
-                "13th Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1IyIiw3fiNSSAOkN4RqRG9r7RntglpPSZNGL_BNcoa34/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/nukkad/nukkad.jpg"));
+                "13th February", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1IyIiw3fiNSSAOkN4RqRG9r7RntglpPSZNGL_BNcoa34/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/nukkad/nukkad.jpg"));
 
 
         rules = "1. Performance should be in Hindi or English or both. However short sub - passages in other languages are allowed .\n" +
@@ -296,7 +296,7 @@ public class Singleton {
                 "Shikhar Sachdeva +91-8447403102";
 
         dramaEvents.add(new Events("Drama", "Natya", "BR Ambedkar Auditorium", null,
-                "15th Feb", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1u9UKgopLJuaWRgbSPhCp9LU_672BO_1Dhi1kxK9cRmo/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/natya/natya%20brochure.jpg"));
+                "15th February", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1u9UKgopLJuaWRgbSPhCp9LU_672BO_1Dhi1kxK9cRmo/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/natya/natya%20brochure.jpg"));
 
         SugarRecord.saveInTx(dramaEvents);
 
@@ -320,10 +320,10 @@ public class Singleton {
                 "Nalin Choudhary +91-8588001179 ";
 
         fashionEvents.add(new Events("Fashion", "Paridhan", "Sports Complex", "If you think you have it in you to set fire to the stage with thousands of eyes on each perfectly choreographed step you take on the ramp, this is where you belong ",
-                "14th Feb", " 3:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1APUs55t67Me-nrSeuxViJEwPj9aoPQkRC--pFRI_11g/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/paridhan/paridhan.jpg"));
+                "14th February", " 3:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1APUs55t67Me-nrSeuxViJEwPj9aoPQkRC--pFRI_11g/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/paridhan/paridhan.jpg"));
 
         fashionEvents.add(new Events("Fashion", "Campus Princess", "BR Ambedkar Auditorium", "Engifest 2k16 presents Campus Princess - a pageant wrapped up with infinite oomph and glamour. Campus Princess is a platform to bring out your raw talent and to introduce yourself as the most stunning and talented girl in the campus. With varied aspirations, passions and rock solid attitude, these girls are never going to bow down again. ",
-                "13 Feb", "5:00 pm", null, null, null, "https://docs.google.com/forms/d/1SJX4dMjS_74xKTc_Tvpq3e0iigtE_nDP1SliRS5Kk-M/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/campus-princess/femina.jpg"));
+                "13th February", "5:00 pm", null, null, null, "https://docs.google.com/forms/d/1SJX4dMjS_74xKTc_Tvpq3e0iigtE_nDP1SliRS5Kk-M/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/campus-princess/femina.jpg"));
 
 
         SugarRecord.saveInTx(fashionEvents);
@@ -334,14 +334,14 @@ public class Singleton {
         proNightEvents.add(new Events("Pro Nights", "Rock Night", "Sports Complex", "\n" +
                 "“Rock and roll is a nuclear blast of reality in a mundane world where no-one is allowed to be magnificent.” -Kim Fowley\n" +
                 "Engifest’16 brings you some of the best rock talent in the country for a sonically exhilarating experience that will leave your senses absolutely spellbound! You won’t be able to resist banging your heads to the powerful beats and tapping your feet with the intense music; so overwhelmingly influencing will be the aura at this event! ",
-                "14 Feb", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/rock-night/rock%20night.jpg"));
+                "14th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/rock-night/rock%20night.jpg"));
 
         proNightEvents.add(new Events("Pro Nights", "Livewire (Star Night)", "Sports Complex", "Live Wire is the main attraction of Engifest'2016 where a popular singer/band captivates the gigantic audience with their breathtaking music. The energy and enthusiasm around Live Wire is unmatched and the atmosphere is electric. Having featured popular singers like Mohit Chauhan in the past, Live Wire'16 will surely entrance and dazzle you. Get ready to be captivated by Live Wire'16, which will surely be a night you will never forget. ",
-                "13 Feb", "8:00 pm", null, null, null, null, false,"http://engifest.dtu.ac.in/events/livewire/live%20wire.jpg"));
+                "13th February", "8:00 pm", null, null, null, null, false,"http://engifest.dtu.ac.in/events/livewire/live%20wire.jpg"));
 
         proNightEvents.add(new Events("Pro Nights", "EDM Night", "Sports Complex", "EDM- what once developed from a small culture and now one of the biggest music culture of the world.Hardwell, Garrix, Guetta being just a few names.\n" +
                 "With the catchy beats and the electrifying rhythm, Engifest 2k16 endeavors a night in our own campus, where each head will keep banging and every feet will groove under the electric sky. The moment when you'll realize EDM is not music anymore it's a lifestyle. YOLO..!!!",
-                "15 Feb", "8:00 pm", null, null, null, null, false,"http://engifest.dtu.ac.in/events/edm-night/edm%20night.jpg"));
+                "15th February", "8:00 pm", null, null, null, null, false,"http://engifest.dtu.ac.in/events/edm-night/edm%20night.jpg"));
 
 
         SugarRecord.saveInTx(proNightEvents);
@@ -350,7 +350,7 @@ public class Singleton {
 
         miscEvents.add(new Events("Miscellaneous", "Shakedown", "Hostel Road",  "The whirr of tyres speeding down the tracks; the feel of vintage bikes driving by you… Yes! SHAKEDOWN, the most anticipated event of Engifest’16 is here!\n" +
                 "Presented by Souls of Speed, Shakedown is one-of-a-kind roadshow- a spectacle which would leave you enticed. Jaws will drop and eyes will widen, as daredevil stunts are pulled off with ease and style! ",
-                "14 Feb", "12:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/shakedown/Shakedown.jpg"));
+                "14th February", "12:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/shakedown/Shakedown.jpg"));
 
         rules = "Team size: At most 15 (including the actors)\n" +
                 "Time Limit: 5 to 15 minutes\n" +
@@ -365,7 +365,7 @@ public class Singleton {
                 "Ayush Goel +91-9999888200 ";
 
         miscEvents.add(new Events("Miscellaneous", "Kaleidoscope", "Edusat Hall",  "Short film making competition, where the theme will be provided a month before engifest. Handpicked Entries will be screened at the venue with the presence of the judges. ",
-                "14th Feb", "10:00 am", null, rules, contacts, "https://goo.gl/forms/fZuODXpy9B", false, "http://engifest.dtu.ac.in/events/kaleidoscope/11163111_887505434646113_4947505584396171817_o.jpg"));
+                "14th February", "10:00 am", null, rules, contacts, "https://goo.gl/forms/fZuODXpy9B", false, "http://engifest.dtu.ac.in/events/kaleidoscope/11163111_887505434646113_4947505584396171817_o.jpg"));
 
         miscEvents.add(new Events("Miscellaneous", "Mr and Miss Engifest", true));
         SugarRecord.saveInTx(miscEvents);
