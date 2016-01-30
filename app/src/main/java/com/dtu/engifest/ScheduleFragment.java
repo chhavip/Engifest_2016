@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -48,6 +49,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
         scheduleButton14 = (FrameLayout) view.findViewById(R.id.feb_14);
         scheduleButton15 = (FrameLayout) view.findViewById(R.id.feb_15);
 
+        scheduleButton13.requestFocus();
         scheduleButton13.setOnClickListener(this);
         scheduleButton14.setOnClickListener(this);
         scheduleButton15.setOnClickListener(this);
@@ -66,7 +68,8 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
          myAdapter = new EventListAdapter(getActivity(), eventList);
         eventRecycler.setAdapter(myAdapter);
         eventRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-        scheduleButton13.requestFocus();
+        eventRecycler.setItemAnimator(new DefaultItemAnimator());
+
 
         return view;
     }
@@ -96,8 +99,8 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 break;
 
         }
-        myAdapter.notifyDataSetChanged();
-       // Log.e("asd", events.get(0).getDate());
+
+        Log.e("asd", eventList.get(0).getDate() + " " + eventList.get(0).getName());
 
     }
 
@@ -121,6 +124,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 t15.setTextColor(getResources().getColor(R.color.colorAccent));
                 day = 1;
                 addEventsAccordingToSchedule();
+                myAdapter.notifyDataSetChanged();
 
                 break;
             case R.id.feb_14:
@@ -130,6 +134,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 t15.setTextColor(getResources().getColor(R.color.colorAccent));
                 day = 2;
                 addEventsAccordingToSchedule();
+                myAdapter.notifyDataSetChanged();
                 break;
             case R.id.feb_15:
                 scheduleButton15.requestFocus();
@@ -138,6 +143,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 t13.setTextColor(getResources().getColor(R.color.colorAccent));
                 day = 3;
                 addEventsAccordingToSchedule();
+                myAdapter.notifyDataSetChanged();
                 break;
         }
     }
