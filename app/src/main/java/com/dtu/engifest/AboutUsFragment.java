@@ -1,6 +1,10 @@
 package com.dtu.engifest;
 
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,6 +21,11 @@ import com.hanks.htextview.HTextViewType;
 import java.util.HashMap;
 
 import in.championswimmer.libsocialbuttons.buttons.BtnFacebook;
+import in.championswimmer.libsocialbuttons.buttons.BtnInstagram;
+import in.championswimmer.libsocialbuttons.buttons.BtnYoutube;
+import in.championswimmer.libsocialbuttons.fabs.FABFacebook;
+import in.championswimmer.libsocialbuttons.fabs.FABInstagram;
+import in.championswimmer.libsocialbuttons.fabs.FABYoutube;
 
 /**
  * Created by chhavi on 24/1/16.
@@ -25,7 +34,9 @@ public class AboutUsFragment extends Fragment {
 
     protected SliderLayout sliderShow;
 
-    BtnFacebook fb;
+    FABFacebook fb;
+    FABYoutube youtube;
+    FABInstagram inst;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +57,61 @@ public class AboutUsFragment extends Fragment {
         file_maps.put("5", "http://engifest.dtu.ac.in/glimpses/7.jpg");
         file_maps.put("6", "http://engifest.dtu.ac.in/glimpses/0.jpg");
         file_maps.put("7", "http://engifest.dtu.ac.in/glimpses/1.jpg");
+        fb = (FABFacebook)view.findViewById(R.id.fb);
+        inst = (FABInstagram)view.findViewById(R.id.inst);
+        youtube = (FABYoutube)view.findViewById(R.id.you);
+
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://www.facebook.com/engifest/";
+                try {
+                    Intent i = new Intent("android.intent.action.MAIN");
+                    i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                    i.addCategory("android.intent.category.LAUNCHER");
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                } catch (ActivityNotFoundException e) {
+                    // Chrome is not installed
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(i);
+                }
+            }
+        });
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://www.youtube.com/channel/UCttG9rAcheQ_gAAmRb5CKEg";
+                try {
+                    Intent i = new Intent("android.intent.action.MAIN");
+                    i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                    i.addCategory("android.intent.category.LAUNCHER");
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                } catch (ActivityNotFoundException e) {
+                    // Chrome is not installed
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(i);
+                }
+            }
+        });
+        inst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://www.instagram.com/engifest__dtu/";
+                try {
+                    Intent i = new Intent("android.intent.action.MAIN");
+                    i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                    i.addCategory("android.intent.category.LAUNCHER");
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                } catch (ActivityNotFoundException e) {
+                    // Chrome is not installed
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(i);
+                }
+            }
+        });
 
 
 

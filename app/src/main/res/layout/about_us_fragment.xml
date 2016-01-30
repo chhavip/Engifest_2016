@@ -46,20 +46,25 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
        <in.championswimmer.libsocialbuttons.fabs.FABFacebook
            android:layout_width="50dp"
+           android:id="@+id/fb"
            android:layout_marginRight="20dp"
            android:layout_weight="1"
            android:layout_height="60dp" />
         <in.championswimmer.libsocialbuttons.fabs.FABInstagram
             android:layout_width="50dp"
             android:layout_weight="1"
+            android:id="@+id/inst"
+
             android:layout_marginRight="20dp"
             android:layout_height="60dp" />
         <in.championswimmer.libsocialbuttons.fabs.FABYoutube
             android:layout_width="50dp"
+            android:id="@+id/you"
+
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:layout_height="60dp" />
