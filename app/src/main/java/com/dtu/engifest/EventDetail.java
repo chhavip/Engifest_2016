@@ -105,6 +105,7 @@ public class EventDetail extends AppCompatActivity {
 
                     @Override
                     public void onPrepareLoad(Drawable placeHolderDrawable) {
+                        image.setImageResource(R.drawable.joker_port);
 
                     }
                 });

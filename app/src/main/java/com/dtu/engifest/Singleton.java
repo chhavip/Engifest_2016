@@ -36,6 +36,7 @@ public class Singleton {
         caregories.add(new Sponsors ("Drama", R.drawable.drama));
         caregories.add(new Sponsors("Fashion", R.drawable.fashion));
         caregories.add(new Sponsors("Pro Nights", R.drawable.pro_nights));
+        caregories.add(new Sponsors("Literary", R.drawable.music));
         caregories.add(new Sponsors("Miscellaneous", R.drawable.misc));
         caregories.add(new Sponsors("Informal Events", R.drawable.inf));
 
@@ -119,15 +120,53 @@ public class Singleton {
                 "Special lighting\n" +
                 "\n" +
                 "In case of conflicts, decision of the judges would be considered final and binding\n";
-        contacts = "Surabhi Seth +91-9971819013 \n" +
-                "Saurabh Suman +91-9582317061 \n" +
-                "Achal Yadav +91-8376054139 \n" +
-                "Pooja Gupta +91-7838724227";
+        contacts = "Aditi Maheshwari +91-9717481156";
         danceEvents.add(new Events("Dance", "Anushthan", "BR Ambedkar Auditorium", "While Indian classical dance is an umbrella term for various codified art forms rooted in sacred Hindu musical theatre styles, the term “Folk dance” describes all forms of folk and tribal dances in regions across India. While Indian classical dance was considered a higher form of art and was practiced in courts, temples and on special occasions, folk dance forms were and are still practiced in groups in rural areas as an expression of the daily work and rituals of the common people during festivals. ",
                 "13th February", "11:00 am", "  300/- per team\n" +
-                "    100/- per individual ", rules, contacts, "https://docs.google.com/forms/d/14BSTpjPltUJ6PtsajHY8R6HsdkO_ZVChDyg3RY780wg/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/anushthan/11058440_871279442935379_7185984909711420466_o.jpg"));
+                "100/- per individual ", rules, contacts, "https://docs.google.com/forms/d/14BSTpjPltUJ6PtsajHY8R6HsdkO_ZVChDyg3RY780wg/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/anushthan/11058440_871279442935379_7185984909711420466_o.jpg"));
 
-        danceEvents.add(new Events("Dance", "STFU", true));
+        rules = "ONE ON ONE POPPING BATTLE\n" +
+                "1. The two participants be on opposite sides of the stage.\n" +
+                "2. The songs played during the battle would be randomly played by the DJ. \n" +
+                "3. There would be two rounds of performances during each battle. \n" +
+                "4. There would not be any point system in the battle round. The winner would be announced after each battle by the judge’s discretion. \n" +
+                "5. The time given to each contestant in the preliminary rounds would be approx. 30 seconds. \n" +
+                "6. In the finals, the time limit for each performer in each round will be approx. 1 minute. \n" +
+                "7. The judging criteria for the popping will be based on-\n" +
+                "i) ORIGINAL POPPING MOVEMENTS (Foundation, Techniques and Variations of styles ex: Popping, Boogaloo, Tutting, Animation, Snaking etc...) \n" +
+                "ii) CHARACTER AND CHARISMA (Eye contact and Interaction with environment) \n" +
+                "iii) MUSICALITY (Pure Funk, Improvisation and Interaction with the music) \n" +
+                "iv) STYLE AND GRACE (Execution and Demonstration of body control through balance, strength and range of motion) \n" +
+                "v) ATTITUDE (No fear Confidence, High energy, Good sportsmanship. Ability to experiment through improvisation and making any mistakes into something, Focus on the music...not moves or worries!) \n" +
+                "vi) FLOOR WORK (Within the Popping vocabulary) \n" +
+                "vii) STAGE PRESENCE (Entertainment quality/Performance/Audience connection) \n" +
+                "viii) CREATIVITY (....Add your flavor, Be Extraordinary) \n" +
+                "\n" +
+                "TWO ON TWO POPPING BATTLE\n" +
+                "1. All preliminary rounds would be two rounds each and each performer would get approx. 30 seconds to perform.\n" +
+                "2. In the final would, there would be 3 rounds. \n" +
+                "3. The time limit for each performer during preliminary rounds would be approx. 30 seconds. \n" +
+                "4. The time limit for each performer during the finals would be approx. 1 minute. \n" +
+                "5. The music played by the DJ would be random and would feature funk, rap, break beats, electronica etc. \n" +
+                "6. The judging would be non-point based and the sole discretion of the judge would decide who wins the round. \n" +
+                "7. The result would depend upon the combined performance of both the team members.\n" +
+                "\n" +
+                "FOUR ON FOUR All styles BATTLE\n" +
+                "1. The number of members in the crew should be 4.\n" +
+                "2. Total time duration for the preliminary rounds would be 6 minutes. \n" +
+                "3. The changeover between the crews would be done at a gap of 30 seconds. \n" +
+                "4. The finals would feature a total time duration of 8 minutes. \n" +
+                "5. Elements of breaking must be incorporated in the performance namely toprock, downrock, freezes and power moves along with other dance forms of hip hop. \n" +
+                "6. The judging would not be point based and would be done on the discretion of the judge based on overall team performance. \n" +
+                "\n" +
+                "The rules and regulations are subject to change based on the discretion of the organizers. Kindly keep checking the official site of the ENGIFEST and STFU for any changes in the rules and procedures.\n" +
+                "Information on the registration procedure, registration fee, and deadline for registration, prizes and venue would be put up separately on the website.\n" +
+                "Note: The remaining categories will be final soon. Stay tuned.";
+        contacts = "Aditi +91-7065142265\n" +
+        "Arshiya +91-9818558592";
+        danceEvents.add(new Events("Dance", "Switch The Funk Up","OAT", "S.T.F.U (Switch the Funk up) is the street dance competition of Engifest which has become an established dance event in just an year of existence.\n" +
+                "In this event, various street dancers will thrill you with their immaculate dancing styles. Be a part of the crowd that will witness some of the top dancers of our college battle it out for the prize. The competition will be judged by International world class dancers Boogie Frantick, Mighty ZULU Kings and The GR818ERS. So, get ready to witness the ultimate dancing event!!"
+        , "15th February","10:00 am",null,rules, contacts,null, false, "http://engifest.dtu.ac.in/events/stfu/stfu.jpg"));
 
         SugarRecord.saveInTx(danceEvents);
 
@@ -217,22 +256,10 @@ public class Singleton {
 
         musicEvents.add(new Events("Music", "Vocalicious", "Convocation Hall", "Does your hand itch to reach out for the mike? Is the stage your second home and the audience your second family? Then come, be a part of Vocalicious. The stage awaits you.\n" +
                 "Registration has to be done ONLINE ONLY. There will be NO on the spot registration. ",
-                "15th February", "10:00 am", null, rules, contacts, null, false, "http://engifest.dtu.ac.in/events/vocalicious/1966027_687808047949187_4492048074217824304_o.jpg"));
+                "15th February", "10:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1qabYx-der4tDNvUiYgn1B3eIeZTHFUSLPIGppHbDZlI/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/vocalicious/1966027_687808047949187_4492048074217824304_o.jpg"));
 
 
 
-       /* rules = "";
-        contacts = "Nikil James Paul +91-9643617174\n" +
-                "Suhail Subair +91-7042673847\n" +
-                "Yash Chauhan +91-9555650014";
-
-        musicEvents.add(new Events("Music", "Battle Of Bands", "OAT", "“It's all about the game and how you play it\n" +
-                "All about control and if you can take it”\n" +
-                "If these lines instantly remind you of a deep, husky low-pitched growl, you have arrived at the right spot.\n" +
-                "Engifest ’16, the annual cultural festival of Delhi Technological University invites you to an ear-shattering Arpeggio – Battle of the Bands. Let the cymbals clank, the guitars strum and the screams rattle Delhi-42! ",
-                "14th February", "2:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1qabYx-der4tDNvUiYgn1B3eIeZTHFUSLPIGppHbDZlI/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/battle-of-bands/battle%20of%20bands.jpg"));
-
-*/
 
         rules = "1. Time limit: 10 minutes, including set up.\n" +
                 "2. Group can comprise of 5-15 members.\n" +
@@ -341,11 +368,71 @@ public class Singleton {
 
         proNightEvents.add(new Events("Pro Nights", "EDM Night", "Sports Complex", "EDM- what once developed from a small culture and now one of the biggest music culture of the world.Hardwell, Garrix, Guetta being just a few names.\n" +
                 "With the catchy beats and the electrifying rhythm, Engifest 2k16 endeavors a night in our own campus, where each head will keep banging and every feet will groove under the electric sky. The moment when you'll realize EDM is not music anymore it's a lifestyle. YOLO..!!!",
-                "15th February", "8:00 pm", null, null, null, null, false,"http://engifest.dtu.ac.in/events/edm-night/edm%20night.jpg"));
+                "15th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/edm-night/edm%20night.jpg"));
 
 
         SugarRecord.saveInTx(proNightEvents);
 
+        List<Events> literaryEvents = new ArrayList<>();
+
+
+        rules = "1. Each team shall consist of 3 speakers and 1 adjucator.\n" +
+                "2. The Formal followed would be a one vs one Knockout PD.\n" +
+                "3. Each team has to prepare and send a résumé to sahitya.dtu@gmail.com . Teams will be shortlisted on the basis of their résumé.\n" +
+                "4. The Asian format of Parliamentary Debate will be followed.\n" +
+                "5. The deadline for registration is 20th January '16.";
+        contacts = "Vidushi Tyagi +91-9871739158 \n" +
+                "Pooja Chopra +91-8860836738 ";
+
+        literaryEvents.add(new Events("Literary", "Parliamentary Debate", "Mech Block", "A standard Asian format Parliamentary Debate competition, this event is assured to be a fierce battle of wit and words, designed to challenge and enhance the contestants’ debating prowess and their teamwork ability.",
+                "13th February", "11:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1v0aiBC8-hb0xxZ4EUiXITfXjhhBMh4AsmH_OxNpBHz0/viewform", false, "http://engifest.dtu.ac.in/events/parliamentary-debate/12509685_527477990746703_2564655962457361401_n.jpg"));
+
+
+        rules = "The rules of the game are simple and will be told to on the spot by the JAM master - the judge of the event.\n" +
+                "The most common rules are mentioned here:\n" +
+                "1. You CANNOT be boring.\n" +
+                "2. You have to be grammatically correct. \n" +
+                "3. Queens English is a MUST.\n" +
+                "4. You cannot hesitate.\n" +
+                "You will be judged based on wit, humor, spontaneity and various other criteria that depend solely on the discretion of the JAM master. ";
+        contacts = "Aditya +91-9711763847 \n" +
+                "Mudit +91-9971200645";
+
+        literaryEvents.add(new Events("Literary", "Just A Minute", "Science Block", "Get ready for this fast paced, 60 second linguistic thriller! This battle tests your quick thinking, speaking ability and command over the English language. You will be pitted against several students in this war zone and no mercy will be shown. Get ready for this year most EPIC battle. You got a minute to win it.\n" +
+                "The game is divided into two stages:\n" +
+                "1. Basically in this stage groups of 8 or 9, depending on the number of players present during the event, will be formed. A face off will be held and the one with the most points qualify.\n" +
+                "2. The winners of each group will go against each other and following the same pattern (obviously), the one with the most points will win.\n" +
+                "There are various different rounds that the participant may have to take part in. The examples include the Rhyme round, Disconnect round, Alphabetical round and many more.",
+                "13th February", "3:00 pm", null, rules, contacts, "https://docs.google.com/forms/d/1paDU0tupxvIyikhOrx7PlJ8686VfLCLxTHSm7gaVQDY/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/jam/JAM_Poster__1453748765_106.215.169.37.jpg"));
+
+        rules = "1. Download Fluttr from Google Play Store: http://getfluttr.com/mobile.\n" +
+                "2. Post your entries in the channel \"Sahitya - DTU Creative Writing Competition\" in 'Discover' section. iOS and Windows phone users may send in their entries at sahitya.dtu@gmail.com \n" +
+                "3. Mention your email ID and contact number. You'll be informed about your selection by 11th February.\n" +
+                "Entries shall be accepted in Hindi and English only.";
+        contacts = "Abuzar Jamal +91-9810682595 \n" +
+                "Ishna Kaul +91-9953148879 ";
+
+        literaryEvents.add(new Events("Literary", "Creative Writing", "Science Block", "The online preliminaries are as follows:\n" +
+                "Compose a paragraph/poem/prose in 400 characters (NOT WORDS, CHARACTERS) on the topic \"Mirror or दर्पण\" and send it to us by February 10, midnight.\n" +
+                "The selected entries shall face a tougher battle in the offline round on February 13 at DTU campus.",
+                "13th February", "11:00 am", null, rules, contacts, "https://docs.google.com/forms/d/1NYwgqiHztVTDxNs5Vs3XEumiesGioh7z6FUvzojNnOM/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/creative-writing/12565466_529379543889881_5506223773677176857_n.jpg"));
+
+        rules = "1. Each team shall consist of 3 speakers and 1 adjucator.\n" +
+                "2. The Formal followed would be a one vs one Knockout PD.\n" +
+                "3. Each team has to prepare and send a résumé to sahitya.dtu@gmail.com . Teams will be shortlisted on the basis of their résumé.\n" +
+                "4. The Asian format of Parliamentary Debate will be followed.\n" +
+                "5. The deadline for registration is 20th January '16.";
+        contacts = "Anmol Bharaj +91-9717509414 \n" +
+                "Ishaa Bishnoi +91-9910077616 ";
+
+        literaryEvents.add(new Events("Literary", "Mixed Bag", "Science Block\n", "A Word Games event, this is the ultimate amalgamation of literary, lingual and logical hurdles for all the master of all trades out there!\n" +
+                "The rules are pretty simple:\n" +
+                "The event comprises of only one round, which will be in the form of 1.5 hours written test, where we test your word power and creativity with an array of out of box questions.\n" +
+                "Three members maximum allowed in team. Lone wolves allowed as well.\n" +
+                "This is the event where you battle for the title of the 'Ultimate Master of Words'!",
+                "14th February", "11:00 am", null, null, contacts, "https://docs.google.com/forms/d/1wSeSWTFECh1FG3M5I-RDKQ8sFb5un0gY5vg4VOgEa_4/viewform?c=0&w=1", false, "http://engifest.dtu.ac.in/events/mixed-bag/12439329_530588460435656_2325362346917674574_n.jpg"));
+
+        SugarRecord.saveInTx(literaryEvents);
         List<Events> miscEvents = new ArrayList<>();
 
         miscEvents.add(new Events("Miscellaneous", "Shakedown", "Hostel Road",  "The whirr of tyres speeding down the tracks; the feel of vintage bikes driving by you… Yes! SHAKEDOWN, the most anticipated event of Engifest’16 is here!\n" +
