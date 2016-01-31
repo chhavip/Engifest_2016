@@ -454,6 +454,11 @@ public class Singleton {
         miscEvents.add(new Events("Miscellaneous", "Kaleidoscope", "Edusat Hall",  "Short film making competition, where the theme will be provided a month before engifest. Handpicked Entries will be screened at the venue with the presence of the judges. ",
                 "14th February", "10:00 am", null, rules, contacts, "https://goo.gl/forms/fZuODXpy9B", false, "http://engifest.dtu.ac.in/events/kaleidoscope/11163111_887505434646113_4947505584396171817_o.jpg"));
 
+        miscEvents.add(new Events("Miscellaneous", "Kumar Vishwas Live", "OAT",  "A poet, a writer, a politician, an inspiration. \n" +
+                "With his extraordinary recitation skills, he engulfs the crowd in his own mesmerizing aura. With the stellar power of his presentation, he sends hard-hitting messages encased in bittersweet words.\n" +
+                "Ladies and gentlemen, Engifest’16 presents to you KUMAR VISHWAS, a motivator, a craftsman, who brought in a breath of fresh air to Hindi Poetry with his innovative, intense words and transformed the way the Indian youth looks at poetry, forever. ",
+                "15th February", "5:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/kumar-vishwas-live/744c20a2-9638-4cd1-a20c-a477f18f8ab4.jpg"));
+
         rules = "1. No costumes or props will be provided. \n" +
                 "2. For the FIRST ROUND, participants will be asked to walk the ramp with given props. \n" +
                 "3. For the SECOND ROUND, the participants will introduce themselves in not more than two-three lines. This introduction will then be followed by TALENT SHOW. Any sound track used for this round must be brought in a Pen Drive. Time limit- 3 minutes. \n" +
