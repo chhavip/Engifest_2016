@@ -108,7 +108,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == R.id.login) {
+        if(v.getId() == R.id.register) {
             progressBar.setVisibility(View.VISIBLE);
             String nameUser = name.getText().toString();
             String emailUser = emailId;
