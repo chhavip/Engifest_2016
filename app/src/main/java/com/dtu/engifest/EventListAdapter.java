@@ -42,7 +42,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.MyVi
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, EventDetail.class).putExtra("name", list.get(position).getName()));
+                context.startActivity(new Intent(context, EventDetail.class).putExtra("registeredEmail", list.get(position).getName()));
             }
         });
     }

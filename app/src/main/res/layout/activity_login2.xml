@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<android.support.v7.widget.Toolbar android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay"/>-->
+
+        <!-- Email Label -->
+        <com.github.jorgecastillo.FillableLoader
+            android:id="@+id/fillableLoader"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_height="200dp"
+            app:fl_originalWidth="650"
+            app:fl_originalHeight="600"
+            app:fl_strokeColor="#FFFFFF"
+            app:fl_fillColor="#610729"
+            android:layout_marginLeft="40dp"
+            app:fl_strokeWidth="2dp"
+            app:fl_strokeDrawingDuration="5000"
+            app:fl_fillDuration="5000"
+            app:fl_clippingTransform="waves" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:id="@+id/email"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:hint="Registered Email"
+            android:textColor="@color/c_white"
+            android:background="@color/grey_800"
+            />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:background="@color/dark_purple_800"
+            android:text="Login"/>
+
+        <TextView android:id="@+id/link_register"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/grey_100"
+            android:text="New to Engifest? Register!"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:fontFamily="serif"/>
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/progress_bar"/>
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/skip_button"
+        android:textSize="12sp"
+        android:layout_marginBottom="15dp"
+        android:text="Not Interested? Skip! You'll miss our amazing updates"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        android:fontFamily="serif"
+        />
+
+</FrameLayout>

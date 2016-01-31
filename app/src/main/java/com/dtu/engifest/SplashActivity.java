@@ -7,18 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import com.hanks.htextview.HTextView;
 import com.hanks.htextview.HTextViewType;
-import com.parse.Parse;
 import com.parse.ParseAnalytics;
-import com.parse.ParseInstallation;
-import com.parse.PushService;
 
 /**
  * Created by chhavi on 22/1/16.
@@ -41,7 +36,7 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
         hTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                startActivity(new Intent(SplashActivity.this, RegisterActivity.class));
                 finish();
             }
         });
@@ -69,7 +64,7 @@ public class SplashActivity extends AppCompatActivity implements ViewSwitcher.Vi
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                startActivity(new Intent(SplashActivity.this, RegisterActivity.class));
                 finish();
 
             }

@@ -86,7 +86,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
                                         public void onSelection(MaterialDialog dialog, View view, int position, CharSequence text) {
 
 
-                                            context.startActivity(new Intent(context, EventDetail.class).putExtra("name", text));
+                                            context.startActivity(new Intent(context, EventDetail.class).putExtra("registeredEmail", text));
 
                                         }
                                     })
@@ -94,7 +94,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
 
                         }
                     } else {
-                        context.startActivity(new Intent(context, EventDetail.class).putExtra("name", "Informal Events"));
+                        context.startActivity(new Intent(context, EventDetail.class).putExtra("registeredEmail", "Informal Events"));
                     }
                 }
 

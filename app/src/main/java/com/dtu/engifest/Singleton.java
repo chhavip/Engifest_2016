@@ -177,7 +177,7 @@ public class Singleton {
         rules = "Number Of Rounds: 3\n" +
                 "Team Size: 3 - 6 members (All college students). At least one Percussionist and two different instruments\n" +
                 "Elimination:\n" +
-                "1. Bands will be required to send in at least one recorded original compositions and one cover at arpeggiobotb@gmail.com, latest by 9th February 2016. The mail must include name of the band, name and college names of the band members and one contact number.\n" +
+                "1. Bands will be required to send in at least one recorded original compositions and one cover at arpeggiobotb@gmail.com, latest by 9th February 2016. The mail must include registeredEmail of the band, registeredEmail and college names of the band members and one contact number.\n" +
                 "2. The covers can be improvised.\n" +
                 "Top 10 entries will be selected for the semi-finals.\n" +
                 "Semi-Finals\n" +
