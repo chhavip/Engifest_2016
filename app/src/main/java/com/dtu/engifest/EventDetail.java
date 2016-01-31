@@ -49,8 +49,8 @@ public class EventDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_detail);
-        String name = getIntent().getExtras().getString("registeredEmail");
-        List<Events> events = Events.find(Events.class, "registeredEmail = ?", name);
+        String name = getIntent().getExtras().getString("name");
+        List<Events> events = Events.find(Events.class, "name = ?", name);
 
         title = (TextView)findViewById(R.id.movie_title);
         date = (TextView)findViewById(R.id.release_date_text);

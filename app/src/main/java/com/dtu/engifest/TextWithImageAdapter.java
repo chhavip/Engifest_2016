@@ -49,7 +49,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
     }
     @Override
     public TextWithImageAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(context).inflate(resId, null, false);
+        View itemView = LayoutInflater.from(context).inflate(resId, parent, false);
 
         return new MyViewHolder(itemView);
     }

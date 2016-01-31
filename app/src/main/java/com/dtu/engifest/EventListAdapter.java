@@ -28,7 +28,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.MyVi
 
     @Override
     public EventListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(context).inflate(R.layout.three_text_view, null, false);
+        View itemView = LayoutInflater.from(context).inflate(R.layout.three_text_view, parent, false);
 
         return new MyViewHolder(itemView);
     }
@@ -42,7 +42,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.MyVi
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, EventDetail.class).putExtra("registeredEmail", list.get(position).getName()));
+                context.startActivity(new Intent(context, EventDetail.class).putExtra("name", list.get(position).getName()));
             }
         });
     }
@@ -60,10 +60,10 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.MyVi
         TextView time;
         public MyViewHolder(View itemView) {
             super(itemView);
-            name = (TextView)itemView.findViewById(R.id.name);
+            name = (TextView)itemView.findViewById(R.id.name3);
             card = (CardView)itemView.findViewById(R.id.card_view);
-            date = (TextView)itemView.findViewById(R.id.date);
-            time = (TextView)itemView.findViewById(R.id.time);
+            date = (TextView)itemView.findViewById(R.id.date3);
+            time = (TextView)itemView.findViewById(R.id.time3);
         }
     }
 }

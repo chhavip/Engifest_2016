@@ -50,6 +50,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
         scheduleButton15 = (FrameLayout) view.findViewById(R.id.feb_15);
 
         scheduleButton13.requestFocus();
+        scheduleButton13.setBackgroundResource(R.drawable.custombordercircularpressed);
         scheduleButton13.setOnClickListener(this);
         scheduleButton14.setOnClickListener(this);
         scheduleButton15.setOnClickListener(this);
@@ -66,10 +67,9 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
 
         eventRecycler = (RecyclerView) view.findViewById(R.id.event_category_recycler_view);
          myAdapter = new EventListAdapter(getActivity(), eventList);
-        eventRecycler.setAdapter(myAdapter);
+        eventRecycler.setHasFixedSize(true);
         eventRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-        eventRecycler.setItemAnimator(new DefaultItemAnimator());
-
+        eventRecycler.setAdapter(myAdapter);
 
         return view;
     }
@@ -118,32 +118,42 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId())  {
             case R.id.feb_13:
-                scheduleButton13.requestFocus();
                 t13.setTextColor(getResources().getColor(R.color.c_white));
                 t14.setTextColor(getResources().getColor(R.color.colorAccent));
                 t15.setTextColor(getResources().getColor(R.color.colorAccent));
+                scheduleButton13.setBackgroundResource(R.drawable.custombordercircularpressed);
+                scheduleButton14.setBackgroundResource(R.drawable.custombordercircular);
+                scheduleButton15.setBackgroundResource(R.drawable.custombordercircular);
                 day = 1;
                 addEventsAccordingToSchedule();
                 myAdapter.notifyDataSetChanged();
-
+                scheduleButton13.requestFocus();
                 break;
             case R.id.feb_14:
-                scheduleButton14.requestFocus();
                 t14.setTextColor(getResources().getColor(R.color.c_white));
                 t13.setTextColor(getResources().getColor(R.color.colorAccent));
                 t15.setTextColor(getResources().getColor(R.color.colorAccent));
+                scheduleButton14.setBackgroundResource(R.drawable.custombordercircularpressed);
+                scheduleButton13.setBackgroundResource(R.drawable.custombordercircular);
+                scheduleButton15.setBackgroundResource(R.drawable.custombordercircular);
                 day = 2;
                 addEventsAccordingToSchedule();
                 myAdapter.notifyDataSetChanged();
+                scheduleButton14.requestFocus();
+
                 break;
             case R.id.feb_15:
-                scheduleButton15.requestFocus();
                 t15.setTextColor(getResources().getColor(R.color.c_white));
                 t14.setTextColor(getResources().getColor(R.color.colorAccent));
                 t13.setTextColor(getResources().getColor(R.color.colorAccent));
+                scheduleButton15.setBackgroundResource(R.drawable.custombordercircularpressed);
+                scheduleButton14.setBackgroundResource(R.drawable.custombordercircular);
+                scheduleButton13.setBackgroundResource(R.drawable.custombordercircular);
                 day = 3;
                 addEventsAccordingToSchedule();
                 myAdapter.notifyDataSetChanged();
+                scheduleButton15.requestFocus();
+
                 break;
         }
     }
