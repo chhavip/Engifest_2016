@@ -164,9 +164,9 @@ public class Singleton {
                 "Note: The remaining categories will be final soon. Stay tuned.";
         contacts = "Aditi +91-7065142265\n" +
         "Arshiya +91-9818558592";
-        danceEvents.add(new Events("Dance", "Switch The Funk Up","OAT", "S.T.F.U (Switch the Funk up) is the street dance competition of Engifest which has become an established dance event in just an year of existence.\n" +
+        danceEvents.add(new Events("Dance", "Switch The Funk Up", "OAT", "S.T.F.U (Switch the Funk up) is the street dance competition of Engifest which has become an established dance event in just an year of existence.\n" +
                 "In this event, various street dancers will thrill you with their immaculate dancing styles. Be a part of the crowd that will witness some of the top dancers of our college battle it out for the prize. The competition will be judged by International world class dancers Boogie Frantick, Mighty ZULU Kings and The GR818ERS. So, get ready to witness the ultimate dancing event!!"
-        , "15th February","10:00 am",null,rules, contacts,null, false, "http://engifest.dtu.ac.in/events/stfu/stfu.jpg"));
+                , "15th February", "10:00 am", null, rules, contacts, null, false, "http://engifest.dtu.ac.in/events/stfu/stfu.jpg"));
 
         SugarRecord.saveInTx(danceEvents);
 
@@ -364,7 +364,7 @@ public class Singleton {
                 "14th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/rock-night/rock%20night.jpg"));
 
         proNightEvents.add(new Events("Pro Nights", "Livewire (Star Night)", "Sports Complex", "Live Wire is the main attraction of Engifest'2016 where a popular singer/band captivates the gigantic audience with their breathtaking music. The energy and enthusiasm around Live Wire is unmatched and the atmosphere is electric. Having featured popular singers like Mohit Chauhan in the past, Live Wire'16 will surely entrance and dazzle you. Get ready to be captivated by Live Wire'16, which will surely be a night you will never forget. ",
-                "13th February", "8:00 pm", null, null, null, null, false,"http://engifest.dtu.ac.in/events/livewire/live%20wire.jpg"));
+                "13th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/livewire/live%20wire.jpg"));
 
         proNightEvents.add(new Events("Pro Nights", "EDM Night", "Sports Complex", "EDM- what once developed from a small culture and now one of the biggest music culture of the world.Hardwell, Garrix, Guetta being just a few names.\n" +
                 "With the catchy beats and the electrifying rhythm, Engifest 2k16 endeavors a night in our own campus, where each head will keep banging and every feet will groove under the electric sky. The moment when you'll realize EDM is not music anymore it's a lifestyle. YOLO..!!!",
@@ -454,7 +454,33 @@ public class Singleton {
         miscEvents.add(new Events("Miscellaneous", "Kaleidoscope", "Edusat Hall",  "Short film making competition, where the theme will be provided a month before engifest. Handpicked Entries will be screened at the venue with the presence of the judges. ",
                 "14th February", "10:00 am", null, rules, contacts, "https://goo.gl/forms/fZuODXpy9B", false, "http://engifest.dtu.ac.in/events/kaleidoscope/11163111_887505434646113_4947505584396171817_o.jpg"));
 
-        miscEvents.add(new Events("Miscellaneous", "Mr and Miss Engifest", true));
+        rules = "1. No costumes or props will be provided. \n" +
+                "2. For the FIRST ROUND, participants will be asked to walk the ramp with given props. \n" +
+                "3. For the SECOND ROUND, the participants will introduce themselves in not more than two-three lines. This introduction will then be followed by TALENT SHOW. Any sound track used for this round must be brought in a Pen Drive. Time limit- 3 minutes. \n" +
+                "4. Participants have to ensure that one copy of their track is with the event coordinator and one copy as a backup, is present with them. \n" +
+                "5. Marks will be deducted in case of a time limit violation. \n" +
+                "6. The THIRD ROUND will be a question and answer round. \n" +
+                "7. Vulgarity in any form will not be allowed. \n" +
+                "8. It is the contestant’s duty to be careful and aware of the order of performance. \n" +
+                "9. Order of performance will be decided by the organisers. \n" +
+                "10. The judges’ decision is final and binding on all. ";
+        miscEvents.add(new Events("Miscellaneous", "Mr and Miss Engifest", "Mini OAT", "Engifest brings to you, Mr. and Ms. Engifest! A contest that celebrates poise and grace; Mr. and Ms. Engifest looks for those who bring a certain style to their spontaneity, who believe being themselves is the best trend they can set. \n" +
+                "The online preliminary round is open, so email your best picture before February 10, 2016 to engifest2016@gmail.com with your name and college, and a caption describing yourself; and we’ll upload them here. Try to get the maximum likes possible on your picture (Note: A like is counted only if the Engifest page has been liked too). 10 Girls and 10 Boys will be selected from the online round on the basis of the number of likes and will participate on the final day of event. ",
+                "15th February", "12:00 pm", null, rules, null, null, false, "http://engifest.dtu.ac.in/events/mr-miss-engi/12622284_836983303094051_7134114369520794596_o.jpg"));
+
+        contacts = "Ayush Bhatia +91-9560059669";
+        miscEvents.add(new Events("Informal Events", "Informal Events", "Mech C. First Floor", "Poker Night\n" +
+                "One table, a deck of cards & a game of poker. Enticing already, isn't it? Well, Engifest’16 presents to you POKER NIGHT, a contest replete with vigor and the will to win; where you test your wit and LUCK. So use your poker face, and raise the stakes with your stellar flair!\n" +
+                "Date: 14, 15 Feb\n" +
+                "Time: 11.00 am\n" +
+                "Venue: Mech C. First Floor \n" +
+                "\n" +
+                "Fun City \n" +
+                "Prom Night \n" +
+                "Cultural Midnight\n" +
+                "Online Photography",
+                "14th and 15th February", "11.00 am", null, null, contacts, null, false, "http://engifest.dtu.ac.in/events/informal/informal.png"));
+
         SugarRecord.saveInTx(miscEvents);
 
 

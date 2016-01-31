@@ -27,6 +27,8 @@ import com.parse.SignUpCallback;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+import me.zhanghai.android.materialprogressbar.MaterialProgressBar;
+
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     @Override
@@ -45,6 +47,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText testEmail;
     Activity mActivity;
     Button registerButton;
+    Button skipButton;
+    MaterialProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +71,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         email = (Spinner) findViewById(R.id.email);
 
         registerButton = (Button) findViewById(R.id.register);
+        skipButton = (Button) findViewById(R.id.skip_button);
+        progressBar = (MaterialProgressBar)findViewById(R.id.progress_bar);
         registerButton.setOnClickListener(this);
+        skipButton.setOnClickListener(this);
         ArrayList<String> emails = new ArrayList<>();
         Pattern emailPattern = Patterns.EMAIL_ADDRESS; // API level 8+
         Account[] accounts = AccountManager.get(this).getAccounts();
@@ -92,33 +99,38 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        progressBar.setVisibility(View.VISIBLE);
+        if (v.getId() == R.id.register) {
+            String nameUser = name.getText().toString();
 
-        String nameUser = name.getText().toString();
+            String emailUser = emailId;
+            ParseUser user = new ParseUser();
+            user.setUsername(nameUser);
+            user.setPassword("testPassword");
+            user.setEmail(emailUser);
 
-        String emailUser = emailId;
-        ParseUser user = new ParseUser();
-        user.setUsername(nameUser);
-        user.setPassword("testPassword");
-        user.setEmail(emailUser);
-
-        user.signUpInBackground(new SignUpCallback() {
-            public void done(ParseException e) {
-                if (e == null) {
-
-                  //  EngifestApplication.updateParseInstallation(user);
-                    Intent intent = new Intent(mActivity, MenuActivity.class);
-                    startActivity(intent);
-                    finish();
-                    // Hooray! Let them use the app now.
+            user.signUpInBackground(new SignUpCallback() {
+                public void done(ParseException e) {
+                    if (e == null) {
+                        progressBar.setVisibility(View.GONE);
+                        //  EngifestApplication.updateParseInstallation(user);
+                        Intent intent = new Intent(mActivity, MenuActivity.class);
+                        startActivity(intent);
+                        finish();
+                        // Hooray! Let them use the app now.
 
 
-                } else {
+                    } else {
 
-                    Log.d("error", e.toString());
-                    // Sign up didn't succeed. Look at the ParseException
-                    // to figure out what went wrong
+                        Log.d("error", e.toString());
+                        // Sign up didn't succeed. Look at the ParseException
+                        // to figure out what went wrong
+                    }
                 }
-            }
-        });
+            });
+        }else if(v.getId() == R.id.skip_button){
+            startActivity(new Intent(mActivity, MenuActivity.class));
+            finish();
+        }
     }
 }
