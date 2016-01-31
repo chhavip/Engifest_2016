@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -22,13 +24,24 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
+import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        emailId = parent.getItemAtPosition(position).toString();
+    }
 
     EditText name;
     Spinner email;
+    String emailId;
     EditText testEmail;
     Activity mActivity;
     Button registerButton;
@@ -46,22 +59,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         } else {
             // show the signup or login screen
         }
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
         FillableLoader fillableLoader = (FillableLoader) findViewById(R.id.fillableLoader);
+        name = new EditText(this);
         name = (EditText) findViewById(R.id.name);
-        testEmail = (EditText) findViewById(R.id.email);
+        email = (Spinner) findViewById(R.id.email);
 
         registerButton = (Button) findViewById(R.id.register);
         registerButton.setOnClickListener(this);
-//        Pattern emailPattern = Patterns.EMAIL_ADDRESS; // API level 8+
-//        Account[] accounts = AccountManager.get(this).getAccounts();
-//        for (Account account : accounts) {
-//            if (emailPattern.matcher(account.name).matches()) {
-//                String possibleEmail = account.name;
-//                Log.d("emails", possibleEmail);
-//            }
-//        }
+        ArrayList<String> emails = new ArrayList<>();
+        Pattern emailPattern = Patterns.EMAIL_ADDRESS; // API level 8+
+        Account[] accounts = AccountManager.get(this).getAccounts();
+        for (Account account : accounts) {
+            if (emailPattern.matcher(account.name).matches()) {
+                emails.add(account.name);
+                String possibleEmail = account.name;
+                Log.d("emails", possibleEmail);
+            }
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, emails);
+// Specify the layout to use when the list of choices appears
+//            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+            email.setAdapter(adapter);
+            email.setOnItemSelectedListener(this);
+        }
         fillableLoader.setSvgPath(getString(R.string.seventy_five_engi));
         fillableLoader.start();
 
@@ -70,13 +92,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-/*
-        String nameUser = "me";
-        String emailUser = "shikhark211@gmail.com";*/
+
         String nameUser = name.getText().toString();
-        String emailUser = testEmail.getText().toString();
-        Toast.makeText(mActivity, "onClick", Toast.LENGTH_SHORT).show();
-        final ParseUser user = new ParseUser();
+
+        String emailUser = emailId;
+        ParseUser user = new ParseUser();
         user.setUsername(nameUser);
         user.setPassword("testPassword");
         user.setEmail(emailUser);
@@ -86,11 +106,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if (e == null) {
 
                   //  EngifestApplication.updateParseInstallation(user);
+                    Intent intent = new Intent(mActivity, MenuActivity.class);
+                    startActivity(intent);
                     finish();
                     // Hooray! Let them use the app now.
 
-                    Intent intent = new Intent(mActivity, MenuActivity.class);
-                    startActivity(intent);
+
                 } else {
 
                     Log.d("error", e.toString());
