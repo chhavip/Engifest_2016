@@ -22,7 +22,7 @@
         android:layout_height="200dp"
         app:fl_originalWidth="650"
         app:fl_originalHeight="600"
-        app:fl_strokeColor="#000000"
+        app:fl_strokeColor="#FFFFFF"
         app:fl_fillColor="#610729"
         android:layout_marginLeft="40dp"
         app:fl_strokeWidth="2dp"

@@ -56,7 +56,8 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    List<Events> eventses = Events.find(Events.class, "category = ?", list.get(position).getName());
+                    if (position != list.size() - 1){
+                        List<Events> eventses = Events.find(Events.class, "category = ?", list.get(position).getName());
                     Log.e("sa", eventses.get(0).getName());
                     String[] items = new String[eventses.size()];
                     for (int i = 0; i < eventses.size(); i++) {
@@ -78,6 +79,9 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
                                 })
                                 .show();
 
+                    }
+                }else{
+                        context.startActivity(new Intent(context, EventDetail.class).putExtra("name","Informal Events"));
                     }
                 }
 

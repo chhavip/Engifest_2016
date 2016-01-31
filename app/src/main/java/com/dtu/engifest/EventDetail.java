@@ -52,8 +52,6 @@ public class EventDetail extends AppCompatActivity {
         String name = getIntent().getExtras().getString("name");
         List<Events> events = Events.find(Events.class, "name = ?", name);
 
-        Log.e("asfa", events.get(0).getName());
-
         title = (TextView)findViewById(R.id.movie_title);
         date = (TextView)findViewById(R.id.release_date_text);
         time = (TextView)findViewById(R.id.release_date);
