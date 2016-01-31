@@ -64,6 +64,9 @@
             android:name=".EventDetail"
             android:label="@string/title_activity_event_detail"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ExploreActivity">
+
+        </activity>
 
         <service android:name="com.parse.PushService" />
 

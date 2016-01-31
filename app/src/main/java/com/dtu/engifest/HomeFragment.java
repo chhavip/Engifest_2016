@@ -46,6 +46,12 @@ public class HomeFragment extends Fragment {
         sliderShow = (SliderLayout) view.findViewById(R.id.slider);
         explore = (CardView) view.findViewById(R.id.explore);
         accommodation = (CardView) view.findViewById(R.id.accommodation);
+        explore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ExploreActivity.class));
+            }
+        });
         /*HTextView about_engifest = (HTextView)view.findViewById(R.id.about_engifest);
 
         String aboutEngi = "Thrill, joy and ecstasy are words that are synonymous with ENGIFEST";

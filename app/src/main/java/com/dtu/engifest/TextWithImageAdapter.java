@@ -29,6 +29,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
     Context context;
     View myView;
     boolean isSponsors;
+    boolean isExplore;
     public TextWithImageAdapter(List<Sponsors> list, int resId, Context context) {
             this.list = list;
             this.resId = resId;
@@ -37,7 +38,15 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
         }
         this.context = context;
     }
-
+    public TextWithImageAdapter(List<Sponsors> list, int resId, Context context, boolean isExplore) {
+        this.list = list;
+        this.resId = resId;
+        if(resId == R.layout.card_with_text_and_image)  {
+            isSponsors = true;
+        }
+        this.context = context;
+        this.isExplore = isExplore;
+    }
     @Override
     public TextWithImageAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(context).inflate(resId, null, false);
@@ -51,43 +60,47 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
 
         holder.name.setText(list.get(position).getName());
         if(!isSponsors) {
-            Picasso.with(context).load(list.get(position).getImageResource()).into(holder.imageView);
+            if (isExplore) {
+                Picasso.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
+                //Log.e("asd", list.get(position).getImageResource())
+            } else{
+                Picasso.with(context).load(list.get(position).getImageResource()).placeholder(R.drawable.joker_port).into(holder.imageView);
 
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (position != list.size() - 1){
+                    if (position != list.size() - 1) {
                         List<Events> eventses = Events.find(Events.class, "category = ?", list.get(position).getName());
-                    Log.e("sa", eventses.get(0).getName());
-                    String[] items = new String[eventses.size()];
-                    for (int i = 0; i < eventses.size(); i++) {
-                        items[i] = eventses.get(i).getName();
-                    }
+                        Log.e("sa", eventses.get(0).getName());
+                        String[] items = new String[eventses.size()];
+                        for (int i = 0; i < eventses.size(); i++) {
+                            items[i] = eventses.get(i).getName();
+                        }
 
-                    if (eventses.size() != 0) {
-                        new MaterialDialog.Builder(context)
-                                .title("Events")
-                                .items(items)
-                                .itemsCallback(new MaterialDialog.ListCallback() {
-                                    @Override
-                                    public void onSelection(MaterialDialog dialog, View view, int position, CharSequence text) {
+                        if (eventses.size() != 0) {
+                            new MaterialDialog.Builder(context)
+                                    .title("Events")
+                                    .items(items)
+                                    .itemsCallback(new MaterialDialog.ListCallback() {
+                                        @Override
+                                        public void onSelection(MaterialDialog dialog, View view, int position, CharSequence text) {
 
 
-                                        context.startActivity(new Intent(context, EventDetail.class).putExtra("name", text));
+                                            context.startActivity(new Intent(context, EventDetail.class).putExtra("name", text));
 
-                                    }
-                                })
-                                .show();
+                                        }
+                                    })
+                                    .show();
 
-                    }
-                }else{
-                        context.startActivity(new Intent(context, EventDetail.class).putExtra("name","Informal Events"));
+                        }
+                    } else {
+                        context.startActivity(new Intent(context, EventDetail.class).putExtra("name", "Informal Events"));
                     }
                 }
 
             });
 
-
+        }
 
         }
         else {
