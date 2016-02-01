@@ -5,6 +5,7 @@ import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Patterns;
@@ -106,7 +107,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
 
         if(v.getId() == R.id.register) {
             progressBar.setVisibility(View.VISIBLE);
@@ -134,6 +135,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     } else {
 
                         Log.d("error", e.toString());
+                        Snackbar.make(v, "Invalid Login Parametres, Please Retry", Snackbar.LENGTH_LONG).show();
+
                         // Sign up didn't succeed. Look at the ParseException
                         // to figure out what went wrong
                     }

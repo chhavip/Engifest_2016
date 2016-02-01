@@ -4,6 +4,7 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -84,7 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
         @Override
-        public void onClick (View v){
+        public void onClick (final View v){
             progressBar.setVisibility(View.VISIBLE);
             String registeredEmailUser = registeredEmail.getText().toString();
 
@@ -97,7 +98,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         finish();
                         // Hooray! The user is logged in.
                     } else {
+                        //final View view = v;
                         Log.d("errorLogin", e.toString());
+                        Snackbar.make(v, "Invalid Login Parametres, Please Retry", Snackbar.LENGTH_LONG).show();
                         // Signup failed. Look at the ParseException to see what happened.
                     }
                 }
