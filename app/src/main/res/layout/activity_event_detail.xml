@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:id="@+id/cordinator_layout"
     android:background="#e77d25"
-    tools:context="com.dtu.engifest.EventDetail">
+    tools:context="com.dtudelhi.engifest.EventDetail">
 
 
     <include layout="@layout/content_event_detail" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dtu.engifest" >
+    package="com.dtudelhi.engifest" >
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -17,13 +17,13 @@
       to match your app's package name + ".permission.C2D_MESSAGE".
     -->
     <permission
-        android:name="com.dtu.engifest.permission.C2D_MESSAGE"
+        android:name="com.dtudelhi.engifest.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.dtu.engifest.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.dtudelhi.engifest.permission.C2D_MESSAGE" />
 
     <application
-        android:name=".EngifestApplication"
+        android:name="com.dtudelhi.engifest.EngifestApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -46,27 +46,27 @@
             android:value="true" />
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
-            android:value="com.dtu.engifest" />
+            android:value="com.dtudelhi.engifest" />
 
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SplashActivity" >
+        <activity android:name="com.dtudelhi.engifest.MainActivity" />
+        <activity android:name="com.dtudelhi.engifest.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity" >
+        <activity android:name="com.dtudelhi.engifest.MenuActivity" >
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.dtudelhi.engifest.RegisterActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".EventDetail"
+            android:name="com.dtudelhi.engifest.EventDetail"
             android:label="@string/title_activity_event_detail"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ExploreActivity" >
+        <activity android:name="com.dtudelhi.engifest.ExploreActivity" >
         </activity>
 
         <service android:name="com.parse.PushService" />
@@ -90,11 +90,11 @@
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
 <!--                   IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
-                <category android:name="com.dtu.engifest" />
+                <category android:name="com.dtudelhi.engifest" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".LoginActivity" >
+        <activity android:name="com.dtudelhi.engifest.LoginActivity" >
         </activity>
     </application>
 

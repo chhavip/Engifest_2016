@@ -1,4 +1,4 @@
-package com.dtu.engifest;
+package com.dtudelhi.engifest;
 
 import org.junit.Test;
 
