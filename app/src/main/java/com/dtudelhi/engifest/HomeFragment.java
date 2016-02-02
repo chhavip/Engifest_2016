@@ -1,5 +1,6 @@
 package com.dtudelhi.engifest;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
@@ -25,11 +28,13 @@ import java.util.HashMap;
 public class HomeFragment extends Fragment {
     protected   SliderLayout sliderShow;
     CardView explore;
+    CardView register;
+    Activity mActivity;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mActivity = getActivity();
     }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,6 +46,45 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), ExploreActivity.class));
+            }
+        });
+        register = (CardView) view.findViewById(R.id.register);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String url = "https://play.google.com/store/apps/details?id=com.blackcurrantapps.iamin&referrer=utm_source%3DDelhi%2520Network%26utm_medium%3DWhatsapp%2520Links%26utm_term%3DDTU%252BDelhi%26utm_campaign%3DDelhi%2520Technological%2520University%26anid%3Dadmob";
+                new MaterialDialog.Builder(mActivity)
+                        .title("Instructions")
+                        .content("Step 1: Download and register on IAMIN App\n" +
+                                "\n" +
+                                "Step 2: Go to Engifest in the App, claim your free gatepass and click on IAMIN\n" +
+                                "\n" +
+                                "Step 3: Go to Offers section in the App and download the Loudshout App\n" +
+                                "\n" +
+                                "Step 4: Register on Loudshout App and select DTU as your basecamp\n" +
+                                "\n" +
+                                "Entry point verification:\n" +
+                                "\n" +
+                                "a) QR code scan of ticket received in the IAMIN App or Email received from IAMIN\n" +
+                                "\n" +
+                                "b) Physical verification of Loudshout App download with DTU base camp selection")
+                        .positiveText("Download IAMIN App").onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(MaterialDialog dialog, DialogAction which) {
+                        try {
+                            Intent i = new Intent("android.intent.action.MAIN");
+                            i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                            i.addCategory("android.intent.category.LAUNCHER");
+                            i.setData(Uri.parse(url));
+                            startActivity(i);
+                        } catch (ActivityNotFoundException e) {
+                            // Chrome is not installed
+                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                            startActivity(i);
+                        }
+                    }
+                })
+                        .show();
             }
         });
         /*HTextView about_engifest = (HTextView)view.findViewById(R.id.about_engifest);
