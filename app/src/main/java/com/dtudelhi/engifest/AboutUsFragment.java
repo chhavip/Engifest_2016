@@ -34,6 +34,7 @@ public class AboutUsFragment extends Fragment {
     FABYoutube youtube;
     FABInstagram inst;
     CardView accommodation;
+    CardView contactUs;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.about_us_fragment, container, false);
         accommodation = (CardView) view.findViewById(R.id.accommodation);
+        contactUs = (CardView) view.findViewById(R.id.contactUs);
         sliderShow = (SliderLayout) view.findViewById(R.id.slider);
         HashMap<String, String> file_maps = new HashMap<String, String>();
         file_maps.put("1", "http://engifest.dtu.ac.in/glimpses/2.jpg");
@@ -72,6 +74,12 @@ public class AboutUsFragment extends Fragment {
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(i);
                 }
+            }
+        });
+        contactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
         fb.setOnClickListener(new View.OnClickListener() {
