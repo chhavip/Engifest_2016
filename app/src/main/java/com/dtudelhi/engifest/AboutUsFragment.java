@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,7 @@ public class AboutUsFragment extends Fragment {
     FABFacebook fb;
     FABYoutube youtube;
     FABInstagram inst;
+    CardView accommodation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class AboutUsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.about_us_fragment, container, false);
-
+        accommodation = (CardView) view.findViewById(R.id.accommodation);
         sliderShow = (SliderLayout) view.findViewById(R.id.slider);
         HashMap<String, String> file_maps = new HashMap<String, String>();
         file_maps.put("1", "http://engifest.dtu.ac.in/glimpses/2.jpg");
@@ -55,7 +57,23 @@ public class AboutUsFragment extends Fragment {
         fb = (FABFacebook)view.findViewById(R.id.fb);
         inst = (FABInstagram)view.findViewById(R.id.inst);
         youtube = (FABYoutube)view.findViewById(R.id.you);
-
+        accommodation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://docs.google.com/forms/d/1MajWbBidj5w2RnO1kX6MynJ5ANzkHD2RFcD0AreQ5H0/viewform?c=0&w=1";
+                try {
+                    Intent i = new Intent("android.intent.action.MAIN");
+                    i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                    i.addCategory("android.intent.category.LAUNCHER");
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                } catch (ActivityNotFoundException e) {
+                    // Chrome is not installed
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(i);
+                }
+            }
+        });
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

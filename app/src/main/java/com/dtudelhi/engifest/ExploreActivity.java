@@ -30,9 +30,9 @@ public class ExploreActivity extends AppCompatActivity {
     private void addEventCategories() {
 
         eventCategoryList.add(new Sponsors("Food City", "https://scontent.fbom1-1.fna.fbcdn.net/hphotos-xtl1/v/t1.0-9/12193603_830764367049278_8140470311146019482_n.jpg?oh=5b3b2f0c3304b9468ab7787cf90f636d&oe=5724FA24"));
-        eventCategoryList.add(new Sponsors("Food City", "https://scontent.fbom1-1.fna.fbcdn.net/hphotos-xtl1/v/t1.0-9/12193603_830764367049278_8140470311146019482_n.jpg?oh=5b3b2f0c3304b9468ab7787cf90f636d&oe=5724FA24"));
-        eventCategoryList.add(new Sponsors("Food City", "https://scontent.fbom1-1.fna.fbcdn.net/hphotos-xtl1/v/t1.0-9/12193603_830764367049278_8140470311146019482_n.jpg?oh=5b3b2f0c3304b9468ab7787cf90f636d&oe=5724FA24"));
-        eventCategoryList.add(new Sponsors("Food City", "https://scontent.fbom1-1.fna.fbcdn.net/hphotos-xtl1/v/t1.0-9/12193603_830764367049278_8140470311146019482_n.jpg?oh=5b3b2f0c3304b9468ab7787cf90f636d&oe=5724FA24"));
+        eventCategoryList.add(new Sponsors("OAT", R.drawable.capmus));
+        eventCategoryList.add(new Sponsors("Sports Complex", R.drawable.capmus));
+        eventCategoryList.add(new Sponsors("Auditorium", "https://scontent.fbom1-1.fna.fbcdn.net/hphotos-xtl1/v/t1.0-9/12193603_830764367049278_8140470311146019482_n.jpg?oh=5b3b2f0c3304b9468ab7787cf90f636d&oe=5724FA24"));
 
 
 

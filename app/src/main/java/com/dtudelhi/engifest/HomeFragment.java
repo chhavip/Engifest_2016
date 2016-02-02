@@ -25,7 +25,6 @@ import java.util.HashMap;
 public class HomeFragment extends Fragment {
     protected   SliderLayout sliderShow;
     CardView explore;
-    CardView accommodation;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +37,6 @@ public class HomeFragment extends Fragment {
 
         sliderShow = (SliderLayout) view.findViewById(R.id.slider);
         explore = (CardView) view.findViewById(R.id.explore);
-        accommodation = (CardView) view.findViewById(R.id.accommodation);
         explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,23 +69,7 @@ public class HomeFragment extends Fragment {
             sliderShow.setPresetTransformer(SliderLayout.Transformer.Accordion);
             sliderShow.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);
 
-        accommodation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = "https://docs.google.com/forms/d/1MajWbBidj5w2RnO1kX6MynJ5ANzkHD2RFcD0AreQ5H0/viewform?c=0&w=1";
-                try {
-                    Intent i = new Intent("android.intent.action.MAIN");
-                    i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
-                    i.addCategory("android.intent.category.LAUNCHER");
-                    i.setData(Uri.parse(url));
-                    startActivity(i);
-                } catch (ActivityNotFoundException e) {
-                    // Chrome is not installed
-                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                    startActivity(i);
-                }
-            }
-        });        return view;
+                return view;
     }
 
     @Override

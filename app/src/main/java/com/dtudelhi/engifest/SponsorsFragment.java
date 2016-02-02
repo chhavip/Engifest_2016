@@ -66,8 +66,8 @@ public class SponsorsFragment extends Fragment {
                 }
             }
         });
-        Sponsors sponsors = new Sponsors();
-        sponsorsList.add(sponsors);
+//        Sponsors sponsors = new Sponsors();
+//        sponsorsList.add(sponsors);
     }
 
     @Override
