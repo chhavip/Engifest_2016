@@ -47,6 +47,8 @@
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.dtudelhi.engifest" />
+        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/ic_stat_engi_logo_grey"/>
+
 
         <activity android:name="com.dtudelhi.engifest.MainActivity" />
         <activity android:name="com.dtudelhi.engifest.SplashActivity" >

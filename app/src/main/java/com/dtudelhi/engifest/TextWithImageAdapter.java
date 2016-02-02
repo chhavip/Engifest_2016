@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.dtudelhi.engifest.models.Events;
 import com.dtudelhi.engifest.models.Sponsors;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -62,7 +63,19 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
                 Picasso.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
                 //Log.e("asd", list.get(position).getImageResource())
             } else{
-                Picasso.with(context).load(list.get(position).getImageResource()).placeholder(R.drawable.joker_port).into(holder.imageView);
+                Picasso.with(context).load(list.get(position).getImageResource()).placeholder(R.mipmap.ic_launcher).into(holder.imageView, new Callback() {
+                    @Override
+                    public void onSuccess() {
+
+                        //Log.e("success", "yeah");
+                    }
+
+                    @Override
+                    public void onError() {
+
+                        //Log.e("fail", "yeah");
+                    }
+                });
 
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override

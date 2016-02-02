@@ -362,7 +362,7 @@ public class Singleton {
                 "14th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/rock-night/rock%20night.jpg"));
 
         proNightEvents.add(new Events("Pro Nights", "Livewire (Star Night)", "Sports Complex", "Live Wire is the main attraction of Engifest'2016 where a popular singer/band captivates the gigantic audience with their breathtaking music. The energy and enthusiasm around Live Wire is unmatched and the atmosphere is electric. Having featured popular singers like Mohit Chauhan in the past, Live Wire'16 will surely entrance and dazzle you. Get ready to be captivated by Live Wire'16, which will surely be a night you will never forget. ",
-                "13th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/livewire/live%20wire.jpg"));
+                "13th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/assets/main/vs-cover.jpg"));
 
         proNightEvents.add(new Events("Pro Nights", "EDM Night", "Sports Complex", "EDM- what once developed from a small culture and now one of the biggest music culture of the world.Hardwell, Garrix, Guetta being just a few names.\n" +
                 "With the catchy beats and the electrifying rhythm, Engifest 2k16 endeavors a night in our own campus, where each head will keep banging and every feet will groove under the electric sky. The moment when you'll realize EDM is not music anymore it's a lifestyle. YOLO..!!!",
@@ -471,6 +471,37 @@ public class Singleton {
                 "The online preliminary round is open, so email your best picture before February 10, 2016 to engifest2016@gmail.com with your name and college, and a caption describing yourself; and we’ll upload them here. Try to get the maximum likes possible on your picture (Note: A like is counted only if the Engifest page has been liked too). 10 Girls and 10 Boys will be selected from the online round on the basis of the number of likes and will participate on the final day of event. ",
                 "15th February", "12:00 pm", null, rules, null, null, false, "http://engifest.dtu.ac.in/events/mr-miss-engi/12622284_836983303094051_7134114369520794596_o.jpg"));
 
+
+        rules = "Team Size: 2 per team, cross college teams allowed";
+        contacts = "Bhavesh +91-8447587727\n" +
+                "Suyash +91-7838912711";
+        miscEvents.add(new Events("Miscellaneous", "The Engi Quiz", "Edusat Hall", "Engifest'16 in association with Quizzing Inc presents \"The Engi Quiz\".\n" +
+                "On the very first day of the fest, get your wits sharpened and knowledge replenished for you'll need every bit of your grey cells to crack this nut.\n" +
+                "A general quiz spread over 9 rounds with two prelims slots to thoroughly test your mental faculties giving you a chance to win awesome prizes including up to 15,000 in cash!"
+                ,"13th February", "12:00 pm", "50/- per team", rules, contacts, "http://www.quizzinginc.com/pages/events/event_detail/MTA=/The_Engi_Quiz", false, "http://engifest.dtu.ac.in/events/the-engi-quiz/the%20engi%20quiz.jpg"));
+
+        contacts = "9971492977, 8800564772";
+        miscEvents.add(new Events("Miscellaneous", "Red Street", "Red Street Area Behind Night Canteen",  "The Creative Arts Society of DTU brings to you the \"Red Street \" , A Magical new place where all the art Events will be taking place during Engifest ,blended in the colors of Red and Black .Delve into the depths of the mesmerizing Graffiti of Kalakriti Society, a blend of themes Villians, Valentine and Love.Red Street will also be having a 'Confessions Board' to write whatever is in your heart, Open for all 24 hours, write anything about anyone \n\n" + "Nail'd It\n 1. Both \"Group\" or \"Solo\" entries are graciously invited.\n" +
+                "2. Participants would be provided with a wooden board upon which many nails would be put . Participants are supposed to tie coloured threads on the nails so as to form initials of any name and blend in a design. Participants would be provided with all the required materials on the spot.\n" +
+                "3. Top 3 Masterpieces would be awarded based on creativity and relevance to the theme that is Villians with a pinch of Love. Gear-up your mind with ideas and indulge it in love to give a perfect piece of art !\n" +
+                "Date: 13 Feb\n" +
+                "Time: 11:00 am\n\n"+ "Collage Making\n1. \"Solo\" as well as group entries are invited.\n" +
+                "2. Participants would be provided with glazed papers of three colors of their choice , white sheet and glue .Participants are supposed to tear the papers and make a collage on the theme \"VILLAINS\" . Participants would be provided with all the required materials on the spot.\n" +
+                "3. Top 3 Masterpieces would be awarded based on creativity and relevance to the theme . Gear-up your mind with ideas !! Tear and Paste to give a perfect piece of art !\n" +
+                "Date: 13 Feb\n" +
+                "Time: 1:00 pm\n\n"+"Wasted \nMake a swachh Move\n" +
+                "Kalakriti-TheFine Arts Society of DTU brings to you WASTED : Painting with waste material competition.\n" +
+                "Recycle waste material. Use your creativity and paint with all kinds of waste materials. Embellish with colours to make the best out of waste.\n" +
+                "Waste material will be provided at the venue along with colours and any other tools required.\n" +
+                "Date: 13 Feb\n" +
+                "Time: 10:00 am\n" +
+                "Venue: Red Street Area Near DTU Library\n\n"+"Clay Modelling \nCraft out of clay . Make Artifacts and have fun with clay modelling . Play with clay and show the art genius in you ! Come to be a part of exciting creativity and witness art Each participant will be given clay, toothpicks and ice-cream sticks\n" +
+                "Date: 14 Feb\n" +
+                "Time: 10:00 am\n" +
+                "Venue: Red Street Area Near Night Canteen",
+                "13th February", "11:00 am", null, null, contacts, null, false, "http://engifest.dtu.ac.in/events/red-street/kalakriti.jpg"));
+
+
         contacts = "Ayush Bhatia +91-9560059669";
         miscEvents.add(new Events("Informal Events", "Informal Events", "Mech C. First Floor", "Poker Night\n" +
                 "One table, a deck of cards & a game of poker. Enticing already, isn't it? Well, Engifest’16 presents to you POKER NIGHT, a contest replete with vigor and the will to win; where you test your wit and LUCK. So use your poker face, and raise the stakes with your stellar flair!\n" +
@@ -483,6 +514,7 @@ public class Singleton {
                 "Cultural Midnight\n" +
                 "Online Photography",
                 "14th and 15th February", "11.00 am", null, null, contacts, null, false, "http://engifest.dtu.ac.in/events/informal/informal.png"));
+
 
         SugarRecord.saveInTx(miscEvents);
 
