@@ -1,7 +1,10 @@
 package com.dtudelhi.engifest;
 
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,6 +49,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
         this.context = context;
         this.isExplore = isExplore;
     }
+
     @Override
     public TextWithImageAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(context).inflate(resId, parent, false);
@@ -54,13 +58,55 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
     }
 
     @Override
-    public void onBindViewHolder(TextWithImageAdapter.MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final TextWithImageAdapter.MyViewHolder holder, final int position) {
         final Sponsors sponsors = list.get(position);
 
         holder.name.setText(list.get(position).getName());
         if(!isSponsors) {
             if (isExplore) {
                 Picasso.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
+                holder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(holder.name.getText() =="Food City"){
+                            String url = "https://www.facebook.com/events/973650459389514/";
+                            try {
+                                Intent i = new Intent("android.intent.action.MAIN");
+                                i.setComponent(ComponentName.unflattenFromString("com.android.chrome/com.android.chrome.Main"));
+                                i.addCategory("android.intent.category.LAUNCHER");
+                                i.setData(Uri.parse(url));
+                                context.startActivity(i);
+                            } catch (ActivityNotFoundException e) {
+                                // Chrome is not installed
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                                context.startActivity(i);
+                            }
+                        }else{
+                            String venue = (String)holder.name.getText();
+                            List<Events> eventses = Events.find(Events.class, "venue = ?", venue);
+                            String[] items = new String[eventses.size()];
+                            for (int i = 0; i < eventses.size(); i++) {
+                                items[i] = eventses.get(i).getName();
+                            }
+                            if (eventses.size() != 0) {
+                                new MaterialDialog.Builder(context)
+                                        .title("Events")
+                                        .items(items)
+                                        .itemsCallback(new MaterialDialog.ListCallback() {
+                                            @Override
+                                            public void onSelection(MaterialDialog dialog, View view, int position, CharSequence text) {
+
+
+                                                context.startActivity(new Intent(context, EventDetail.class).putExtra("name", text));
+
+                                            }
+                                        })
+                                        .show();
+
+                            }
+                        }
+                    }
+                });
                 //Log.e("asd", list.get(position).getImageResource())
             } else{
                 Picasso.with(context).load(list.get(position).getImageResource()).placeholder(R.mipmap.ic_launcher).into(holder.imageView, new Callback() {
