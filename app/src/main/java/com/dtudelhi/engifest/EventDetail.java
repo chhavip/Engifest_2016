@@ -99,7 +99,7 @@ public class EventDetail extends AppCompatActivity {
 
                     @Override
                     public void onPrepareLoad(Drawable placeHolderDrawable) {
-                        image.setImageResource(R.drawable.joker_port);
+                        image.setImageResource(R.mipmap.ic_launcher);
                         coordinatorLayout.setBackgroundColor(getVibrantColor(image));
 
                     }
