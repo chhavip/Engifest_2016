@@ -361,7 +361,15 @@ public class Singleton {
                 "Engifest’16 brings you some of the best rock talent in the country for a sonically exhilarating experience that will leave your senses absolutely spellbound! You won’t be able to resist banging your heads to the powerful beats and tapping your feet with the intense music; so overwhelmingly influencing will be the aura at this event! ",
                 "14th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/events/rock-night/rock%20night.jpg"));
 
-        proNightEvents.add(new Events("Pro Nights", "Livewire (Star Night)", "Sports Complex", "Live Wire is the main attraction of Engifest'2016 where a popular singer/band captivates the gigantic audience with their breathtaking music. The energy and enthusiasm around Live Wire is unmatched and the atmosphere is electric. Having featured popular singers like Mohit Chauhan in the past, Live Wire'16 will surely entrance and dazzle you. Get ready to be captivated by Live Wire'16, which will surely be a night you will never forget. ",
+        proNightEvents.add(new Events("Pro Nights", "Livewire (Star Night)", "Sports Complex", "\"Bachna ae Haseeno\" \"Bombaii Nagariya\" se \"Ik Junoon\" leke do \"chokre Jawan\" aarhe hai jinhe sunke aap \"D se dance\" karne ko majhboor hojaenge. \n" +
+                "\n" +
+                "Yes, believe it. VISHAL DADLANI and SHEKHAR RAVJIANI The dynamic duo is here to set fire to the Engifest stage on February 13th in the Star Night with its enthralling compositions and riveting stage performance!\n" +
+                "\n" +
+                "Not only have they dropped the best romance singles one after the other (Read: ‘Tu Aashiqui Hai’, ‘Tujhe Bhula Diya’, ‘Jaane Kyun’ etc.); they have also given some amazing party anthems that you can’t resist busting a groove to! (Read: ‘Sheila Ki Jawani’, ‘Bachna Ae Haseeno’, ‘Criminal’ and ‘Desi Girl’).\n" +
+                "\n" +
+                "So guys, clear your schedules and brace yourselves. As this night you’ll learn to party, Engifest style.\n" +
+                "\n" +
+                "A big shout out to OJAS Entertainment for making this memorable event possible! Thank you for all the help and support you have provided for this to happen smoothly.\n",
                 "13th February", "8:00 pm", null, null, null, null, false, "http://engifest.dtu.ac.in/assets/main/vs-cover.jpg"));
 
         proNightEvents.add(new Events("Pro Nights", "EDM Night", "Sports Complex", "EDM- what once developed from a small culture and now one of the biggest music culture of the world.Hardwell, Garrix, Guetta being just a few names.\n" +
