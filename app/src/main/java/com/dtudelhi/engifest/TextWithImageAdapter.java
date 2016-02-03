@@ -64,7 +64,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
         holder.name.setText(list.get(position).getName());
         if(!isSponsors) {
             if (isExplore) {
-                Picasso.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
+                Picasso.with(context).load(list.get(position).getImageUrl()).resize(120,120).centerCrop().fit().into(holder.imageView);
                 holder.imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

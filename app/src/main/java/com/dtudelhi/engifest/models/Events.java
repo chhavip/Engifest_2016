@@ -19,6 +19,12 @@ public class Events extends SugarRecord {
     String registerLink;
     boolean specialRequirements;
 
+    public Events(String name, String time, String venue) {
+        this.time = time;
+        this.name = name;
+        this.venue = venue;
+    }
+
     public boolean isComingSoon() {
         return comingSoon;
     }

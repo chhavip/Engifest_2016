@@ -80,6 +80,9 @@ public class AboutUsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                Intent i = new Intent();
+                i.setClass(getActivity(), ContacttUsActivity.class);
+                startActivity(i);
             }
         });
         fb.setOnClickListener(new View.OnClickListener() {

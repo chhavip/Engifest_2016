@@ -59,8 +59,9 @@
                     android:layout_marginLeft="40dp"
                     android:textSize="26sp"
                     android:layout_weight="8"
-                    android:textColor="@color/c_dark_red"
+                    android:textColor="@color/white"
                     android:textStyle="italic"
+                    android:fontFamily="serif"
                     android:gravity="center_vertical"
                     android:text=""/>
 
