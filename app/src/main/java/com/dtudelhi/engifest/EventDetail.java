@@ -81,7 +81,7 @@ public class EventDetail extends AppCompatActivity {
         }
         venue.setText(event.getVenue());
         Picasso.with(this)
-                .load(event.getImageUrl())
+                .load(event.getImageUrl()).resize(140, 180)
                 .into(new Target() {
                     @Override
                     public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {

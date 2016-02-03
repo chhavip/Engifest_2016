@@ -9,11 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!--<android.support.v7.widget.Toolbar android:id="@+id/toolbar"-->
-        <!--android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"-->
-        <!--android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay"/>-->
-
-        <!-- Email Label -->
         <com.github.jorgecastillo.FillableLoader
             android:id="@+id/fillableLoader"
             android:layout_width="match_parent"
@@ -77,7 +72,7 @@
             android:id="@+id/skip_button"
             android:textSize="12sp"
             android:layout_marginBottom="15dp"
-            android:text="Not Interested? Skip! You'll miss our amazing updates"
+            android:text="Not Interested? Click here to Skip!"
             android:background="@android:color/transparent"
             android:textColor="@color/white"
             android:fontFamily="serif"

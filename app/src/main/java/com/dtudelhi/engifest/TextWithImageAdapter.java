@@ -64,7 +64,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
         holder.name.setText(list.get(position).getName());
         if(!isSponsors) {
             if (isExplore) {
-                Picasso.with(context).load(list.get(position).getImageUrl()).resize(120,120).centerCrop().fit().into(holder.imageView);
+                Picasso.with(context).load(list.get(position).getImageUrl()).centerCrop().fit().into(holder.imageView);
                 holder.imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -109,7 +109,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
                 });
                 //Log.e("asd", list.get(position).getImageResource())
             } else{
-                Picasso.with(context).load(list.get(position).getImageResource()).placeholder(R.mipmap.ic_launcher).into(holder.imageView, new Callback() {
+                Picasso.with(context).load(list.get(position).getImageResource()).fit().placeholder(R.mipmap.ic_launcher).into(holder.imageView, new Callback() {
                     @Override
                     public void onSuccess() {
 
@@ -163,7 +163,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
         else {
 
             Sponsors sponsor = (Sponsors)list.get(position);
-            Picasso.with(context).load(sponsor.getImageUrl()).into(holder.imageView);
+            Picasso.with(context).load(sponsor.getImageUrl()).fit().centerCrop().into(holder.imageView);
         }
 
 
