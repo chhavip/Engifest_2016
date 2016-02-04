@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
                 final String url = "https://play.google.com/store/apps/details?id=com.blackcurrantapps.iamin&referrer=utm_source%3DDelhi%2520Network%26utm_medium%3DWhatsapp%2520Links%26utm_term%3DDTU%252BDelhi%26utm_campaign%3DDelhi%2520Technological%2520University%26anid%3Dadmob";
                 new MaterialDialog.Builder(mActivity)
                         .title("Instructions")
-                        .content("Step 1: Download and register on IAMIN App\n" +
+                        .content("Registration is a must in order to attend the events!"+"\n\nStep 1: Download and register on IAMIN App\n" +
                                 "\n" +
                                 "Step 2: Go to Engifest in the App, claim your free gatepass and click on IAMIN\n" +
                                 "\n" +
