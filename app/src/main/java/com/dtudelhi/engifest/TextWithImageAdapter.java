@@ -109,7 +109,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
                 });
                 //Log.e("asd", list.get(position).getImageResource())
             } else{
-                Picasso.with(context).load(list.get(position).getImageResource()).fit().placeholder(R.mipmap.ic_launcher).into(holder.imageView, new Callback() {
+                Picasso.with(context).load(list.get(position).getImageResource()).centerCrop().fit().placeholder(R.mipmap.ic_launcher).into(holder.imageView, new Callback() {
                     @Override
                     public void onSuccess() {
 
@@ -163,7 +163,7 @@ public class TextWithImageAdapter extends RecyclerView.Adapter<TextWithImageAdap
         else {
 
             Sponsors sponsor = (Sponsors)list.get(position);
-            Picasso.with(context).load(sponsor.getImageUrl()).fit().centerCrop().into(holder.imageView);
+            Picasso.with(context).load(sponsor.getImageUrl()).resize(100,100).centerInside().into(holder.imageView);
         }
 
 
