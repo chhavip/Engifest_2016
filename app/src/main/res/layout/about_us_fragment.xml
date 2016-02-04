@@ -112,7 +112,15 @@
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:textColor="@color/deep_orange_500"
+    android:text="For bug report or feedback, mail at chhavip.gupta@gmail.com or shikhark211@gmail.com"/>
 
 
 
